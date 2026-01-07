@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMW SERVICE | PERFORMANCE & PRÄZISION</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container flex justify-between items-center">
+            <a href="/" class="logo">
+                <svg class="bmw-logo-svg" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M16 2C8.26811 2 2 8.26811 2 16C2 23.7319 8.26811 30.0001 16 30.0001C23.7319 30.0001 30 23.7319 30 16C30 8.26811 23.7319 2 16 2Z"
+                        fill="url(#paint0_linear_logo)" />
+                    <path
+                        d="M15.9999 24.9426C11.061 24.9426 7.05713 20.9388 7.05713 15.9999C7.05713 11.061 11.061 7.05713 15.9999 7.05713C20.9387 7.05713 24.9426 11.061 24.9426 15.9999C24.9426 20.9388 20.9388 24.9426 15.9999 24.9426Z"
+                        fill="white" />
+                    <path
+                        d="M7.63281 15.9997H16.0002V7.63232C11.3791 7.63232 7.63281 11.3787 7.63281 15.9997ZM16.0002 15.9997V24.3672C20.6214 24.3672 24.3676 20.6209 24.3676 15.9997H16.0002Z"
+                        fill="url(#paint1_linear_logo)" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M8.24351 7.35914C8.67368 7.09244 9.13189 7.17928 9.42833 7.4674C9.88381 7.91014 9.81681 8.42205 9.38354 8.9384L7.48728 11.1982L4.66064 8.82632L6.45878 6.68344C6.83095 6.23992 7.3513 5.88572 7.84573 6.3006C7.85487 6.30827 7.8637 6.31563 7.87225 6.32277C8.00664 6.43488 8.07425 6.49128 8.24848 6.809C8.29211 6.9289 8.32567 7.14621 8.24351 7.35914ZM7.44147 7.22333C7.2596 7.07077 6.97682 7.06464 6.8517 7.2138L5.77167 8.50087L6.43979 9.06151L7.50761 7.78895C7.6419 7.62899 7.64142 7.39111 7.44147 7.22333ZM7.62576 10.0567L8.7516 8.71502C8.90112 8.53686 8.87952 8.25923 8.66136 8.07628C8.46864 7.9145 8.18288 7.95898 8.05472 8.11172L6.91978 9.46432L7.62576 10.0567Z"
+                        fill="white" />
+                    <path
+                        d="M17.4393 3.87616L16.4686 6.44915H15.6626L14.6918 3.87616V6.44915H13.9541V2.76416H15.0626L16.0656 5.38891L17.0686 2.76416H18.1771V6.44915H17.4393V3.87616Z"
+                        fill="white" />
+                    <path
+                        d="M24.9987 9.94876L26.3877 7.98223L25.776 7.22685L23.5637 8.17665L25.0113 6.28288L24.4412 5.57878L22.1294 8.55246L22.8051 9.38016L24.989 8.48146L24.9968 8.49123L23.6637 10.4405L24.3329 11.2735L27.7222 9.63054L27.152 8.92644L24.9987 9.94876Z"
+                        fill="white" />
+                    <defs>
+                        <linearGradient id="paint0_linear_logo" x1="6.27673" y1="6.2767" x2="25.1832" y2="26.2635"
+                            gradientUnits="userSpaceOnUse">
+                            <stop offset="0.0273393" stop-color="#949AA0" />
+                            <stop offset="0.403335" stop-color="#1A1D1E" />
+                            <stop offset="1" stop-color="#040606" />
+                        </linearGradient>
+                        <linearGradient id="paint1_linear_logo" x1="16.0002" y1="7.63232" x2="16.0002" y2="24.3672"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#7CD1F4" />
+                            <stop offset="1" stop-color="#1274B9" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </a>
+
+            <div class="nav-links-container flex items-center gap-6">
+                <div class="nav-links flex space-x-10 items-center">
+                    <a href="#home" class="nav-link active" data-i18n="nav.home">Startseite</a>
+                    <a href="#about" class="nav-link" data-i18n="nav.about">Über uns</a>
+                    <a href="#services" class="nav-link" data-i18n="nav.services">Leistungen</a>
+                    <a href="#examples" class="nav-link" data-i18n="nav.examples">Reparaturbeispiele</a>
+                    <a href="#contact" class="nav-link" data-i18n="nav.contact">Kontakt</a>
+                    <a href="#contact" class="nav-link" data-i18n="nav.appointment">Online-Termin</a>
+                </div>
+
+                <div class="lang-switcher" id="lang-switcher">
+                    <button class="active-lang" data-lang="de">DE</button>
+                    <button data-lang="ru">RU</button>
+                </div>
+
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-video-container">
+                <video autoplay loop muted playsinline preload="metadata"
+                    poster="https://images.unsplash.com/photo-1617788138017-80ad40651399?q=80&w=1920&auto=format&fit=crop"
+                    id="main-video">
+                    <source src="13103349_1920_1080_60fps.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="container">
+                <div class="hero-content">
+                    <h1 data-i18n="hero.title">
+                        <span class="reveal-text"><span>IHR</span></span><br>
+                        <span class="reveal-text"><span>ZUVERLÄSSIGER</span></span><br>
+                        <span class="reveal-text"><span>BMW SERVICE</span></span>
+                    </h1>
+                    <p class="scroll-reveal" data-i18n="hero.subtitle">Qualität, Erfahrung und Leidenschaft für Ihr
+                        Fahrzeug. Wir sorgen dafür, dass Ihr BMW stets in Bestform bleibt.</p>
+
+                    <ul class="hero-usps scroll-reveal" id="hero-usps">
+                        <!-- Dynamic rendering -->
+                    </ul>
+
+                    <div class="hero-btns scroll-reveal">
+                        <a href="#contact" class="btn-primary" data-i18n="hero.cta">Termin vereinbaren</a>
+                        <a href="#services" class="btn-secondary" data-i18n="hero.secondary_cta">Leistungen</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brands Support Bar (Information) -->
+        <section class="brands-bar-section" id="brands">
+            <div class="container">
+                <div id="brands-container" class="brands-grid scroll-reveal">
+                    <!-- Dynamic rendering -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats / Proof Bar -->
+        <div class="stats-bar" id="stats-bar">
+            <div class="container flex justify-between items-center">
+                <div class="stat-item scroll-reveal">
+                    <span class="stat-num" data-i18n="stats.years">14+</span>
+                    <span class="stat-text" data-i18n="stats.years_text">Jahre Erfahrung</span>
+                </div>
+                <div class="stat-item scroll-reveal">
+                    <span class="stat-num" data-i18n="stats.rating">5.0</span>
+                    <span class="stat-text" data-i18n="stats.rating_text">Bewertung</span>
+                </div>
+                <div class="stat-item scroll-reveal">
+                    <span class="stat-num" data-i18n="stats.clients">10.000+</span>
+                    <span class="stat-text" data-i18n="stats.clients_text">Zufriedene Kunden</span>
+                </div>
+            </div>
+        </div>
+
+        <section class="section-padding" id="about">
+            <div class="container flex flex-col md:flex-row items-center gap-20">
+                <div class="about-text scroll-reveal flex-1">
+                    <div class="section-title">
+                        <h2 data-i18n="nav.about">Über uns</h2>
+                        <div class="accent-line"></div>
+                    </div>
+                    <p class="text-dim leading-relaxed" data-i18n="hero.subtitle">
+                        Qualität, Erfahrung und Leidenschaft für Ihr Fahrzeug...
+                    </p>
+                </div>
+                <div class="about-image flex-1 scroll-reveal">
+                    <div class="image-frame">
+                        <img src="bmw_service_hero_poster_1767474166637.png" alt="About BMW Service"
+                            style="border-radius: 4px; filter: grayscale(0.5);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding" id="services">
+            <div class="container">
+                <div class="section-title scroll-reveal">
+                    <h2 data-i18n="services.title">Unsere Leistungen</h2>
+                    <div class="accent-line"></div>
+                </div>
+                <div id="services-grid" class="services-grid">
+                    <!-- Dynamic rendering by app.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Rapid CTA Banner (Information) -->
+        <section class="cta-banner-section scroll-reveal">
+            <div class="container">
+                <div class="cta-banner-content">
+                    <h2 data-i18n="cta_banner.title">Sichern Sie sich 10% Rabatt</h2>
+                    <p data-i18n="cta_banner.subtitle">Auf Ihren ersten Service bei uns. Jetzt Termin anfragen!</p>
+                    <a href="#contact" class="btn-primary" data-i18n="cta_banner.button">Rabatt anfordern</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Advantages (Information) -->
+        <section class="section-padding" id="advantages">
+            <div class="container">
+                <div class="section-title scroll-reveal">
+                    <h2 data-i18n="advantages.title">Ihre Vorteile</h2>
+                    <div class="accent-line"></div>
+                </div>
+                <div id="advantages-grid" class="advantages-grid">
+                    <!-- Dynamic rendering -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Promotions Section -->
+        <section class="section-padding bg-midnight" id="promotions">
+            <div class="container">
+                <div class="section-title scroll-reveal">
+                    <h2 data-i18n="promotions.title">Aktuelle Aktionen</h2>
+                    <div class="accent-line"></div>
+                </div>
+                <div class="promotions-grid" id="promotions-grid">
+                    <!-- Dynamic rendering -->
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding" id="examples">
+            <div class="container">
+                <div class="section-title scroll-reveal">
+                    <h2 data-i18n="examples.title">Reparaturbeispiele</h2>
+                    <div class="accent-line"></div>
+                </div>
+                <div class="examples-grid">
+                    <div class="example-item scroll-reveal">
+                        <img src="https://images.unsplash.com/photo-1597762696071-7f8d68962325?q=80&w=800&auto=format&fit=crop"
+                            alt="Engine Repair">
+                        <div class="example-overlay">
+                            <span>M-Power Engine Tuning</span>
+                        </div>
+                    </div>
+                    <div class="example-item scroll-reveal">
+                        <img src="https://images.unsplash.com/photo-1626071465922-0d19f85c4dc2?q=80&w=800&auto=format&fit=crop"
+                            alt="Brake Service">
+                        <div class="example-overlay">
+                            <span>Performance Brake System</span>
+                        </div>
+                    </div>
+                    <div class="example-item scroll-reveal">
+                        <img src="https://images.unsplash.com/photo-1635437817926-0e1cebdc475d?q=80&w=800&auto=format&fit=crop"
+                            alt="Diagnostics">
+                        <div class="example-overlay">
+                            <span>Deep Systems Diagnostics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tow Truck Promotional Section (Information) -->
+        <section class="tow-truck-section scroll-reveal" id="tow-truck">
+            <div class="container flex flex-col md:flex-row items-center gap-10">
+                <div class="tow-info">
+                    <h2 data-i18n="tow_truck.title">Kostenloser Abschleppdienst</h2>
+                    <p data-i18n="tow_truck.desc">Wir bringen Ihren BMW kostenlos in unsere Werkstatt...</p>
+                    <a href="tel:+49301234567" class="btn-primary" data-i18n="contact.info_phone">+49 30 1234567</a>
+                </div>
+                <div class="tow-visual">
+                    <!-- Tow Truck Premium SVG -->
+                    <svg viewBox="0 0 24 24" fill="none" class="tow-icon-svg">
+                        <path
+                            d="M19 17H22C23.1046 17 24 16.1046 24 15V10C24 8.89543 23.1046 8 22 8H20V5C20 3.89543 19.1046 3 18 3H4C2.89543 3 2 3.89543 2 5V17H4M4 17C4 18.6569 5.34315 20 7 20C8.65685 20 10 18.6569 10 17M4 17H10M10 17H14M14 17C14 18.6569 15.3431 20 17 20C18.6569 20 20 18.6569 20 17M14 17H20M20 17H22M15 8H19M2 9H20"
+                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="section-padding" id="process">
+            <div class="container">
+                <div class="section-title scroll-reveal">
+                    <h2 data-i18n="process.title">In 4 Schritten zum Ziel</h2>
+                    <div class="accent-line"></div>
+                </div>
+                <div class="process-steps" id="process-steps">
+                    <!-- Dynamic rendering -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section (Information) -->
+        <section class="section-padding bg-midnight" id="reviews">
+            <div class="container">
+                <div class="section-title scroll-reveal">
+                    <h2 data-i18n="reviews.title">Kundenbewertungen</h2>
+                    <div class="accent-line"></div>
+                </div>
+                <div id="reviews-grid" class="reviews-grid">
+                    <!-- Dynamic rendering -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Reality / Process Gallery (Information) -->
+        <section class="section-padding" id="reality">
+            <div class="container">
+                <div class="section-title scroll-reveal">
+                    <h2 data-i18n="reality.title">Unsere Werkstatt</h2>
+                    <p class="text-dim" data-i18n="reality.subtitle">Transparenz in jedem Arbeitsschritt</p>
+                    <div class="accent-line"></div>
+                </div>
+                <div class="reality-gallery examples-grid">
+                    <!-- Grid of real-life looking photos -->
+                    <div class="example-item scroll-reveal">
+                        <img src="https://images.unsplash.com/photo-1632823469860-2022d4c06206?q=80&w=800&auto=format&fit=crop"
+                            alt="Reality 1">
+                    </div>
+                    <div class="example-item scroll-reveal">
+                        <img src="https://images.unsplash.com/photo-1621905252507-b354f60bc571?q=80&w=800&auto=format&fit=crop"
+                            alt="Reality 2">
+                    </div>
+                    <div class="example-item scroll-reveal">
+                        <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?q=80&w=800&auto=format&fit=crop"
+                            alt="Reality 3">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding" id="contact">
+            <div class="container">
+                <div class="section-title scroll-reveal">
+                    <h2 data-i18n="contact.title">Kontakt</h2>
+                    <div class="accent-line"></div>
+                </div>
+                <div class="contact-wrapper">
+                    <div class="contact-form-side scroll-reveal">
+                        <form id="contact-form" class="bmw-form">
+                            <div class="form-group">
+                                <input type="text" id="name" required placeholder=" ">
+                                <label for="name" data-i18n="contact.form_name">Ihr Name</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" id="email" required placeholder=" ">
+                                <label for="email" data-i18n="contact.form_email">E-Mail Adresse</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" id="phone" required placeholder=" ">
+                                <label for="phone" data-i18n="contact.form_phone">Telefonnummer</label>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="message" required placeholder=" "></textarea>
+                                <label for="message" data-i18n="contact.form_message">Ihre Nachricht</label>
+                            </div>
+                            <button type="submit" class="btn-primary w-full" data-i18n="contact.form_submit">Nachricht
+                                senden</button>
+                        </form>
+                    </div>
+                    <div class="contact-info-side scroll-reveal">
+                        <div class="info-block">
+                            <h4 data-i18n="contact.info_address">Musterstraße 123, 12345 Berlin</h4>
+                            <p data-i18n="contact.info_hours">Mo-Fr 08:00 - 18:00</p>
+                            <a href="tel:+49301234567" class="info-phone" data-i18n="contact.info_phone">+49 30
+                                1234567</a>
+                        </div>
+                        <div id="map-placeholder" class="map-box">
+                            <iframe
+                                src="https://yandex.ru/map-widget/v1/?um=constructor%3A783d2f01087e21e354ac4dceb3f7a6f7f3c119f7625fd6e51bf377d38ecab7ba&amp;source=constructor"
+                                width="100%" height="400" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p data-i18n="footer.copy">&copy; 2026 BMW SERVICE GERMANY. BUILT FOR PERFORMANCE.</p>
+                <div class="legal-links">
+                    <a href="legal/impressum.html" data-i18n="nav.imprint">Impressum</a>
+                    <a href="legal/datenschutz.html" data-i18n="nav.privacy">Datenschutz</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GDPR Cookie Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="container flex justify-between items-center">
+            <p data-i18n="legal.cookie_text">Wir verwenden Cookies, um Ihre Erfahrung zu verbessern.</p>
+            <div class="flex space-x-10">
+                <a href="legal/datenschutz.html" data-i18n="legal.more">Mehr erfahren</a>
+                <button id="accept-cookies" class="btn-primary" data-i18n="legal.accept">Akzeptieren</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
