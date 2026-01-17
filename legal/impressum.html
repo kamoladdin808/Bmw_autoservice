@@ -5,16 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#020205">
+    <link rel="icon" href="../bmw-svgrepo-com.svg" type="image/svg+xml">
     <title data-i18n-title="nav.imprint">Impressum | BMW SERVICE</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css?v=20260113">
     
     <script>
         // Sync language immediately before DOM renders
         (function() {
-            const savedLang = localStorage.getItem('bmw_lang') || 'ru';
+            const params = new URLSearchParams(window.location.search);
+            const urlLang = params.get('lang');
+            const savedLang = (urlLang === 'de' || urlLang === 'ru') ? urlLang : (localStorage.getItem('bmw_lang') || 'ru');
             document.documentElement.setAttribute('lang', savedLang);
             // Also set active button class on page load
             document.addEventListener('DOMContentLoaded', function() {
@@ -126,7 +126,7 @@
             </div>
         </div>
     </footer>
-    <script src="../js/app.js"></script>
+    <script src="../js/app.js?v=20260113"></script>
 </body>
 
 </html>
