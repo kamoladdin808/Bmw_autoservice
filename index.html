@@ -4,16 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Премиальный сервис BMW: диагностика, ремонт, ТО, детейлинг. Быстрый отклик, оригинальные запчасти, прозрачные цены.">
+    <link rel="canonical" href="./">
+    <link rel="icon" href="bmw-svgrepo-com.svg" type="image/svg+xml">
+    <link rel="alternate" hreflang="de-DE" href="./index.html?lang=de">
+    <link rel="alternate" hreflang="ru-RU" href="./index.html?lang=ru">
+    <link rel="alternate" hreflang="x-default" href="./index.html?lang=de">
+    <meta property="og:title" content="BMW SERVICE | PERFORMANCE & PRÄZISION">
+    <meta property="og:description"
+        content="Премиальный сервис BMW: диагностика, ремонт, ТО, детейлинг. Быстрый отклик, оригинальные запчасти, прозрачные цены.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="bmw-svgrepo-com.svg">
     <title>BMW SERVICE | PERFORMANCE & PRÄZISION</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=20260113">
 
     <script>
         // Sync language immediately before DOM renders
         (function () {
-            const savedLang = localStorage.getItem('bmw_lang') || 'ru';
+            const params = new URLSearchParams(window.location.search);
+            const urlLang = params.get('lang');
+            const savedLang = (urlLang === 'de' || urlLang === 'ru') ? urlLang : (localStorage.getItem('bmw_lang') || 'ru');
             document.documentElement.setAttribute('lang', savedLang);
             // Also set active button class on page load
             document.addEventListener('DOMContentLoaded', function () {
@@ -68,11 +79,23 @@
 
             <div class="nav-links-container flex items-center gap-6">
                 <div class="nav-links flex space-x-10 items-center">
-                    <a href="#home" class="nav-link active" data-i18n="nav.home">Startseite</a>
-                    <a href="#about" class="nav-link" data-i18n="nav.about">Über uns</a>
-                    <a href="#services" class="nav-link" data-i18n="nav.services">Leistungen</a>
-                    <a href="#examples" class="nav-link" data-i18n="nav.examples">Reparaturbeispiele</a>
-                    <a href="#contact" class="nav-link" data-i18n="nav.contact">Kontakt</a>
+                    <a href="#advantages" class="nav-link active" data-i18n="nav.advantages">Преимущества</a>
+                    <a href="#promotions" class="nav-link" data-i18n="nav.promotions">Акции</a>
+                    <a href="#services" class="nav-link" data-i18n="nav.services">Услуги</a>
+                    <a href="#to" class="nav-link" data-i18n="nav.to">ТО</a>
+                    <a href="#contact" class="nav-link" data-i18n="nav.contact">Контакты</a>
+                </div>
+
+                <div class="nav-meta flex items-center gap-6">
+                    <label class="nav-location" aria-label="Выбор адреса">
+                        <select id="location-select">
+                            <option value="north" data-i18n="locations.north">Север</option>
+                            <option value="east" data-i18n="locations.east">Восток</option>
+                            <option value="south" data-i18n="locations.south">Юг</option>
+                        </select>
+                    </label>
+
+                    <a class="nav-phone" href="tel:+74957451111" aria-label="Телефон сервиса">+7 (495) 745-11-11</a>
                 </div>
 
                 <div class="lang-switcher" id="lang-switcher" role="group" aria-label="Language selector">
@@ -80,7 +103,7 @@
                     <button data-lang="ru" aria-label="Switch to Russian">RU</button>
                 </div>
 
-                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu"
+                <button type="button" class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle navigation menu"
                     aria-expanded="false">
                     <span></span>
                     <span></span>
@@ -91,106 +114,32 @@
     </nav>
 
     <main>
+        <!-- 1) HERO -->
         <section class="hero" id="home">
             <div class="hero-video-container" aria-hidden="true"></div>
-
+            <div class="hero-overlay" aria-hidden="true"></div>
             <div class="container">
                 <div class="hero-content">
-                    <h1 data-i18n="hero.title">
-                        <span class="reveal-text"><span>IHR</span></span><br>
-                        <span class="reveal-text"><span>ZUVERLÄSSIGER</span></span><br>
-                        <span class="reveal-text"><span>BMW SERVICE</span></span>
-                    </h1>
-                    <p class="scroll-reveal" data-i18n="hero.subtitle">Qualität, Erfahrung und Leidenschaft für Ihr
-                        Fahrzeug. Wir sorgen dafür, dass Ihr BMW stets in Bestform bleibt.</p>
-
-                    <ul class="hero-usps scroll-reveal" id="hero-usps">
-                        <!-- Dynamic rendering -->
+                    <h1 data-i18n="hero.title">Ваш надежный BMW сервис</h1>
+                    <p data-i18n="hero.subtitle">Качество, опыт и внимание к деталям. Мы поддерживаем ваш BMW в
+                        идеальном
+                        состоянии.</p>
+                    <ul class="hero-usps" id="hero-usps">
+                        <!-- Dynamic rendering by app.js -->
                     </ul>
-
                     <div class="hero-btns">
-                        <a href="#contact" class="btn-primary" data-i18n="hero.cta">Termin vereinbaren</a>
-                        <a href="#services" class="btn-secondary" data-i18n="hero.secondary_cta">Leistungen</a>
+                        <a href="#contact" class="btn-primary" data-i18n="hero.cta">Записаться</a>
+                        <a href="#services" class="btn-secondary" data-i18n="hero.secondary_cta">Услуги</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Brands Support Bar (Information) -->
-        <section class="brands-bar-section" id="brands">
-            <div class="container">
-                <div id="brands-container" class="brands-grid scroll-reveal">
-                    <!-- Dynamic rendering -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Stats / Proof Bar -->
-        <div class="stats-bar" id="stats-bar">
-            <div class="container flex justify-between items-center">
-                <div class="stat-item scroll-reveal">
-                    <span class="stat-num" data-i18n="stats.years">14+</span>
-                    <span class="stat-text" data-i18n="stats.years_text">Jahre Erfahrung</span>
-                </div>
-                <div class="stat-item scroll-reveal">
-                    <span class="stat-num" data-i18n="stats.rating">5.0</span>
-                    <span class="stat-text" data-i18n="stats.rating_text">Bewertung</span>
-                </div>
-                <div class="stat-item scroll-reveal">
-                    <span class="stat-num" data-i18n="stats.clients">10.000+</span>
-                    <span class="stat-text" data-i18n="stats.clients_text">Zufriedene Kunden</span>
-                </div>
-            </div>
-        </div>
-
-        <section class="section-padding" id="about">
-            <div class="container flex flex-col md:flex-row items-center gap-20">
-                <div class="about-text scroll-reveal flex-1">
-                    <div class="section-title">
-                        <h2 data-i18n="nav.about">Über uns</h2>
-                        <div class="accent-line"></div>
-                    </div>
-                    <p class="text-dim leading-relaxed" data-i18n="hero.subtitle">
-                        Qualität, Erfahrung und Leidenschaft für Ihr Fahrzeug...
-                    </p>
-                </div>
-                <div class="about-image flex-1 scroll-reveal">
-                    <div class="image-frame">
-                        <img src="bmw-svgrepo-com.svg" alt="BMW Service - О нас, наша команда и мастерская"
-                            loading="lazy" class="about-image-img">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-padding" id="services">
-            <div class="container">
-                <div class="section-title scroll-reveal">
-                    <h2 data-i18n="services.title">Unsere Leistungen</h2>
-                    <div class="accent-line"></div>
-                </div>
-                <div id="services-grid" class="services-grid">
-                    <!-- Dynamic rendering by app.js -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Rapid CTA Banner (Information) -->
-        <section class="cta-banner-section scroll-reveal">
-            <div class="container">
-                <div class="cta-banner-content">
-                    <h2 data-i18n="cta_banner.title">Sichern Sie sich 10% Rabatt</h2>
-                    <p data-i18n="cta_banner.subtitle">Auf Ihren ersten Service bei uns. Jetzt Termin anfragen!</p>
-                    <a href="#contact" class="btn-primary" data-i18n="cta_banner.button">Rabatt anfordern</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Main Advantages (Information) -->
+        <!-- 2) ПРЕИМУЩЕСТВА -->
         <section class="section-padding" id="advantages">
             <div class="container">
                 <div class="section-title scroll-reveal">
-                    <h2 data-i18n="advantages.title">Ihre Vorteile</h2>
+                    <h2 data-i18n="advantages.title">Преимущества</h2>
                     <div class="accent-line"></div>
                 </div>
                 <div id="advantages-grid" class="advantages-grid">
@@ -199,11 +148,12 @@
             </div>
         </section>
 
-        <!-- Promotions Section -->
+        <!-- 3) АКЦИИ / СЕРВИСНЫЕ ПРЕДЛОЖЕНИЯ -->
         <section class="section-padding bg-midnight" id="promotions">
             <div class="container">
                 <div class="section-title scroll-reveal">
-                    <h2 data-i18n="promotions.title">Aktuelle Aktionen</h2>
+                    <h2 data-i18n="promotions.title">Сервисные предложения</h2>
+                    <p class="text-dim" data-i18n="promotions.subtitle">Актуальные акции и специальные предложения</p>
                     <div class="accent-line"></div>
                 </div>
                 <div class="promotions-grid" id="promotions-grid">
@@ -212,150 +162,187 @@
             </div>
         </section>
 
-        <section class="section-padding" id="examples">
+        <!-- 4) КОНСУЛЬТАЦИЯ МАСТЕРА -->
+        <section class="section-padding" id="consult">
+            <div class="container">
+                <div class="consult-card">
+                    <div class="consult-text">
+                        <h2 data-i18n="consult.title">Требуется консультация мастера?</h2>
+                        <p class="text-dim" data-i18n="consult.subtitle">Звоните или оставьте заявку и мы ответим на все
+                            Ваши вопросы</p>
+                        <a class="consult-phone" href="tel:+74957451111">+7 (495) 745-11-11</a>
+                    </div>
+                    <form id="consult-form" class="bmw-form consult-form">
+                        <div class="form-group">
+                            <input type="text" id="consult-name" required placeholder=" ">
+                            <label for="consult-name" data-i18n="consult.form_name">Ваше имя</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="consult-phone" required placeholder=" ">
+                            <label for="consult-phone" data-i18n="consult.form_phone">Номер телефона</label>
+                        </div>
+                        <label class="consent-line">
+                            <input type="checkbox" id="consult-consent" required>
+                            <span data-i18n="consult.consent">Я согласен(на) на обработку персональных данных</span>
+                        </label>
+                        <button type="submit" class="btn-primary w-full" data-i18n="consult.submit">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5) УСЛУГИ -->
+        <section class="section-padding" id="services">
             <div class="container">
                 <div class="section-title scroll-reveal">
-                    <h2 data-i18n="examples.title">Reparaturbeispiele</h2>
+                    <h2 data-i18n="services.title">Услуги</h2>
+                    <p class="text-dim" data-i18n="services.subtitle">Широкий спектр услуг для обслуживания и ремонта
+                    </p>
                     <div class="accent-line"></div>
                 </div>
-                <div class="examples-grid">
-                    <div class="example-item scroll-reveal">
-                        <img src="https://images.unsplash.com/photo-1597762696071-7f8d68962325?q=80&w=800&auto=format&fit=crop"
-                            alt="BMW M-Power Engine Tuning - Пример ремонта двигателя" loading="lazy">
-                        <div class="example-overlay">
-                            <span>M-Power Engine Tuning</span>
-                        </div>
-                    </div>
-                    <div class="example-item scroll-reveal">
-                        <img src="https://images.unsplash.com/photo-1626071465922-0d19f85c4dc2?q=80&w=800&auto=format&fit=crop"
-                            alt="BMW Performance Brake System - Пример ремонта тормозной системы" loading="lazy">
-                        <div class="example-overlay">
-                            <span>Performance Brake System</span>
-                        </div>
-                    </div>
-                    <div class="example-item scroll-reveal">
-                        <img src="https://images.unsplash.com/photo-1635437817926-0e1cebdc475d?q=80&w=800&auto=format&fit=crop"
-                            alt="BMW Deep Systems Diagnostics - Пример диагностики" loading="lazy">
-                        <div class="example-overlay">
-                            <span>Deep Systems Diagnostics</span>
-                        </div>
-                    </div>
+                <div id="services-grid" class="services-grid">
+                    <!-- Dynamic rendering by app.js -->
+                </div>
+                <div class="services-actions">
+                    <a href="#contact" class="btn-primary" data-i18n="services.cta_primary">Записаться</a>
+                    <a href="#" class="btn-secondary" data-i18n="services.cta_telegram">Записаться через Telegram</a>
                 </div>
             </div>
         </section>
 
-        <!-- Tow Truck Promotional Section (Information) -->
-        <section class="tow-truck-section scroll-reveal" id="tow-truck">
-            <div class="container flex flex-col md:flex-row items-center gap-10">
-                <div class="tow-info">
-                    <h2 data-i18n="tow_truck.title">Kostenloser Abschleppdienst</h2>
-                    <p data-i18n="tow_truck.desc">Wir bringen Ihren BMW kostenlos in unsere Werkstatt...</p>
-                    <a href="tel:+49301234567" class="btn-primary" data-i18n="contact.info_phone">+49 30 1234567</a>
-                </div>
-                <div class="tow-visual">
-                    <!-- Tow Truck Premium SVG -->
-                    <svg viewBox="0 0 24 24" fill="none" class="tow-icon-svg">
-                        <path
-                            d="M19 17H22C23.1046 17 24 16.1046 24 15V10C24 8.89543 23.1046 8 22 8H20V5C20 3.89543 19.1046 3 18 3H4C2.89543 3 2 3.89543 2 5V17H4M4 17C4 18.6569 5.34315 20 7 20C8.65685 20 10 18.6569 10 17M4 17H10M10 17H14M14 17C14 18.6569 15.3431 20 17 20C18.6569 20 20 18.6569 20 17M14 17H20M20 17H22M15 8H19M2 9H20"
-                            stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </div>
-            </div>
-        </section>
-
-        <!-- Process Section -->
-        <section class="section-padding" id="process">
+        <!-- 6) ТО -->
+        <section class="section-padding" id="to">
             <div class="container">
                 <div class="section-title scroll-reveal">
-                    <h2 data-i18n="process.title">In 4 Schritten zum Ziel</h2>
+                    <h2 data-i18n="to.title">ТО</h2>
+                    <p class="text-dim" data-i18n="to.subtitle">Техническое обслуживание по регламенту BMW</p>
                     <div class="accent-line"></div>
                 </div>
-                <div class="process-steps" id="process-steps">
-                    <!-- Dynamic rendering -->
+                <div id="to-grid" class="services-grid">
+                    <!-- Dynamic rendering by app.js -->
                 </div>
             </div>
         </section>
 
-        <!-- Reviews Section (Information) -->
+        <!-- 7) VIDEO CAPTURE -->
+        <section class="section-padding bg-midnight" id="video">
+            <div class="container">
+                <div class="section-title scroll-reveal">
+                    <h2 data-i18n="video.title">Video Capture</h2>
+                    <p class="text-dim" data-i18n="video.subtitle">Video Capture делает процесс обслуживания автомобиля
+                        полностью прозрачным для Вас.</p>
+                    <div class="accent-line"></div>
+                </div>
+
+                <div class="video-capture scroll-reveal" aria-label="Video Capture">
+                    <div class="video-media">
+                        <video class="video-player" controls preload="metadata">
+                            <source src="video.mp4" type="video/mp4">
+                        </video>
+                    </div>
+
+                    <div class="vc-accordion" aria-label="Video Capture steps">
+                        <details class="vc-item" open>
+                            <summary class="vc-summary">
+                                <span class="vc-num">1.</span>
+                                <span class="vc-title" data-i18n="video.steps.0.title">ФИКСАЦИЯ ОТКЛОНЕНИЙ.</span>
+                                <span class="vc-chevron" aria-hidden="true">▾</span>
+                            </summary>
+                            <div class="vc-panel text-dim" data-i18n="video.steps.0.desc">Мастер фиксирует замечания и
+                                показывает их в видео.</div>
+                        </details>
+
+                        <details class="vc-item">
+                            <summary class="vc-summary">
+                                <span class="vc-num">2.</span>
+                                <span class="vc-title" data-i18n="video.steps.1.title">УВЕДОМЛЕНИЕ.</span>
+                                <span class="vc-chevron" aria-hidden="true">▾</span>
+                            </summary>
+                            <div class="vc-panel text-dim" data-i18n="video.steps.1.desc">Вы получаете уведомление и
+                                ссылку на видеоролик.</div>
+                        </details>
+
+                        <details class="vc-item">
+                            <summary class="vc-summary">
+                                <span class="vc-num">3.</span>
+                                <span class="vc-title" data-i18n="video.steps.2.title">ПРОСМОТР.</span>
+                                <span class="vc-chevron" aria-hidden="true">▾</span>
+                            </summary>
+                            <div class="vc-panel text-dim" data-i18n="video.steps.2.desc">Смотрите состояние автомобиля
+                                и рекомендации со смартфона.</div>
+                        </details>
+
+                        <details class="vc-item">
+                            <summary class="vc-summary">
+                                <span class="vc-num">4.</span>
+                                <span class="vc-title" data-i18n="video.steps.3.title">СОГЛАСОВАНИЕ.</span>
+                                <span class="vc-chevron" aria-hidden="true">▾</span>
+                            </summary>
+                            <div class="vc-panel text-dim" data-i18n="video.steps.3.desc">Согласовывайте работы удаленно
+                                — быстро и прозрачно.</div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8) ОТЗЫВЫ -->
         <section class="section-padding bg-midnight" id="reviews">
             <div class="container">
                 <div class="section-title scroll-reveal">
-                    <h2 data-i18n="reviews.title">Kundenbewertungen</h2>
+                    <h2 data-i18n="reviews.title">Отзывы</h2>
                     <div class="accent-line"></div>
                 </div>
-                <div id="reviews-grid" class="reviews-grid">
+                <div id="reviews-grid" class="reviews-grid reviews-slider">
                     <!-- Dynamic rendering -->
                 </div>
             </div>
         </section>
 
-        <!-- Reality / Process Gallery (Information) -->
-        <section class="section-padding" id="reality">
-            <div class="container">
-                <div class="section-title scroll-reveal">
-                    <h2 data-i18n="reality.title">Unsere Werkstatt</h2>
-                    <p class="text-dim" data-i18n="reality.subtitle">Transparenz in jedem Arbeitsschritt</p>
-                    <div class="accent-line"></div>
-                </div>
-                <div class="reality-gallery examples-grid">
-                    <!-- Grid of real-life looking photos -->
-                    <div class="example-item scroll-reveal">
-                        <img src="https://images.unsplash.com/photo-1632823469860-2022d4c06206?q=80&w=800&auto=format&fit=crop"
-                            alt="BMW Service Werkstatt - Внутренний вид мастерской" loading="lazy">
-                    </div>
-                    <div class="example-item scroll-reveal">
-                        <img src="https://images.unsplash.com/photo-1621905252507-b354f60bc571?q=80&w=800&auto=format&fit=crop"
-                            alt="BMW Service Werkstatt - Рабочая зона" loading="lazy">
-                    </div>
-                    <div class="example-item scroll-reveal">
-                        <img src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?q=80&w=800&auto=format&fit=crop"
-                            alt="BMW Service Werkstatt - Оборудование и инструменты" loading="lazy">
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        <!-- 9) КОНТАКТЫ + ЛОКАЦИИ -->
         <section class="section-padding" id="contact">
             <div class="container">
                 <div class="section-title scroll-reveal">
-                    <h2 data-i18n="contact.title">Kontakt</h2>
+                    <h2 data-i18n="contact.title">Контакты</h2>
                     <div class="accent-line"></div>
                 </div>
+
+                <div id="locations-grid" class="locations-grid scroll-reveal">
+                    <!-- Dynamic locations by app.js -->
+                </div>
+
                 <div class="contact-wrapper">
                     <div class="contact-form-side scroll-reveal">
                         <form id="contact-form" class="bmw-form">
                             <div class="form-group">
                                 <input type="text" id="name" required placeholder=" ">
-                                <label for="name" data-i18n="contact.form_name">Ihr Name</label>
+                                <label for="name" data-i18n="contact.form_name">Ваше имя</label>
                             </div>
                             <div class="form-group">
                                 <input type="email" id="email" required placeholder=" ">
-                                <label for="email" data-i18n="contact.form_email">E-Mail Adresse</label>
+                                <label for="email" data-i18n="contact.form_email">Ваш Email</label>
                             </div>
                             <div class="form-group">
                                 <input type="tel" id="phone" required placeholder=" ">
-                                <label for="phone" data-i18n="contact.form_phone">Telefonnummer</label>
+                                <label for="phone" data-i18n="contact.form_phone">Номер телефона</label>
                             </div>
                             <div class="form-group">
                                 <textarea id="message" required placeholder=" "></textarea>
-                                <label for="message" data-i18n="contact.form_message">Ihre Nachricht</label>
+                                <label for="message" data-i18n="contact.form_message">Ваше сообщение</label>
                             </div>
-                            <button type="submit" class="btn-primary w-full" data-i18n="contact.form_submit">Nachricht
-                                senden</button>
+                            <button type="submit" class="btn-primary w-full" data-i18n="contact.form_submit">Отправить
+                                заявку</button>
                         </form>
                     </div>
                     <div class="contact-info-side scroll-reveal">
-                        <div class="info-block">
-                            <h4 data-i18n="contact.info_address">Musterstraße 123, 12345 Berlin</h4>
-                            <p data-i18n="contact.info_hours">Mo-Fr 08:00 - 18:00</p>
-                            <a href="tel:+49301234567" class="info-phone" data-i18n="contact.info_phone">+49 30
-                                1234567</a>
-                        </div>
-                        <div id="map-placeholder" class="map-box">
-                            <iframe
-                                src="https://yandex.ru/map-widget/v1/?um=constructor%3A783d2f01087e21e354ac4dceb3f7a6f7f3c119f7625fd6e51bf377d38ecab7ba&amp;source=constructor"
-                                width="100%" height="400" frameborder="0"
-                                title="Карта расположения сервиса BMW"></iframe>
+                        <div id="map-container" class="map-box map-consent"
+                            data-map-src="https://yandex.ru/map-widget/v1/?um=constructor%3A783d2f01087e21e354ac4dceb3f7a6f7f3c119f7625fd6e51bf377d38ecab7ba&amp;source=constructor">
+                            <div class="map-consent-inner">
+                                <p class="map-consent-text" data-i18n="maps.placeholder">Карта загружается только после
+                                    согласия</p>
+                                <button type="button" id="load-map-btn" class="btn-secondary map-load-btn"
+                                    data-i18n="maps.load">Загрузить карту</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -370,6 +357,7 @@
                 <div class="legal-links">
                     <a href="legal/impressum.html" data-i18n="nav.imprint">Impressum</a>
                     <a href="legal/datenschutz.html" data-i18n="nav.privacy">Datenschutz</a>
+                    <a href="#" id="cookie-settings-link" data-i18n="legal.settings_link">Cookie-Einstellungen</a>
                 </div>
             </div>
         </div>
@@ -379,14 +367,66 @@
     <div id="cookie-banner" class="cookie-banner">
         <div class="container flex justify-between items-center">
             <p data-i18n="legal.cookie_text">Wir verwenden Cookies, um Ihre Erfahrung zu verbessern.</p>
-            <div class="flex space-x-10">
+            <div class="cookie-actions">
                 <a href="legal/datenschutz.html" data-i18n="legal.more">Mehr erfahren</a>
-                <button id="accept-cookies" class="btn-primary" data-i18n="legal.accept">Akzeptieren</button>
+                <button type="button" id="cookie-accept-all" class="btn-primary" data-i18n="legal.accept_all">Accept
+                    all</button>
+                <button type="button" id="cookie-reject" class="btn-secondary" data-i18n="legal.reject">Reject</button>
+                <button type="button" id="cookie-settings" class="btn-secondary"
+                    data-i18n="legal.settings">Settings</button>
             </div>
         </div>
     </div>
 
-    <script src="js/app.js"></script>
+    <!-- Cookie Settings Modal -->
+    <div id="cookie-modal" class="cookie-modal" aria-hidden="true">
+        <div class="cookie-modal-backdrop" data-cookie-close></div>
+        <div class="cookie-modal-card" role="dialog" aria-modal="true" aria-label="Cookie settings">
+            <div class="cookie-modal-header">
+                <h3 data-i18n="legal.settings_title">Cookie-Einstellungen</h3>
+                <button type="button" class="cookie-close" data-cookie-close aria-label="Close">×</button>
+            </div>
+            <div class="cookie-modal-body">
+                <div class="cookie-row cookie-row-disabled" aria-disabled="true">
+                    <div class="cookie-row-left">
+                        <div class="cookie-row-title" data-i18n="legal.cat_necessary">Necessary</div>
+                        <div class="cookie-row-desc" data-i18n="legal.cat_necessary_desc">Erforderlich für den Betrieb
+                            der Website.</div>
+                    </div>
+                    <div class="cookie-row-right">
+                        <input type="checkbox" checked disabled aria-label="Necessary cookies always enabled">
+                    </div>
+                </div>
+
+                <div class="cookie-row">
+                    <div class="cookie-row-left">
+                        <div class="cookie-row-title" data-i18n="legal.cat_maps">External media / Maps</div>
+                        <div class="cookie-row-desc" data-i18n="legal.cat_maps_desc">Lädt externe Karteninhalte (z.B.
+                            Yandex/Google Maps).</div>
+                    </div>
+                    <div class="cookie-row-right">
+                        <input type="checkbox" id="consent-maps" aria-label="Toggle maps consent">
+                    </div>
+                </div>
+
+                <div class="cookie-row">
+                    <div class="cookie-row-left">
+                        <div class="cookie-row-title" data-i18n="legal.cat_fonts">Fonts</div>
+                        <div class="cookie-row-desc" data-i18n="legal.cat_fonts_desc">Lädt externe Schriftarten (Google
+                            Fonts).</div>
+                    </div>
+                    <div class="cookie-row-right">
+                        <input type="checkbox" id="consent-fonts" aria-label="Toggle fonts consent">
+                    </div>
+                </div>
+            </div>
+            <div class="cookie-modal-footer">
+                <button type="button" id="cookie-save" class="btn-primary" data-i18n="legal.save">Speichern</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js?v=20260113"></script>
 </body>
 
 </html>
