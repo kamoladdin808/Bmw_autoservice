@@ -535,28 +535,10 @@ class BMWApp {
         this.setupListeners();
         this.handleScroll();
         this.initScrollReveal();
-        this.initVideoCaptureAccordion();
         this.initConsent();
         this.initMapConsent();
         this.applyConsentToFeatures(this.getConsent() || this.getDefaultConsent());
         this.updateLanguageUrls();
-    }
-
-    initVideoCaptureAccordion() {
-        // Donor-like behavior: only one <details> open at a time
-        const wrap = document.querySelector('.vc-accordion');
-        if (!wrap) return;
-        const items = Array.from(wrap.querySelectorAll('details.vc-item'));
-        if (!items.length) return;
-
-        items.forEach(item => {
-            item.addEventListener('toggle', () => {
-                if (!item.open) return;
-                items.forEach(other => {
-                    if (other !== item) other.open = false;
-                });
-            });
-        });
     }
 
     applyLanguageClasses() {
