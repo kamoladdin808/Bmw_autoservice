@@ -482,7 +482,6 @@ h2 {
   cursor: pointer;
   -webkit-user-select: none;
   user-select: none;
-  transition: color 0.2s ease;
 }
 
 .vc-item summary::-webkit-details-marker {
@@ -522,22 +521,6 @@ h2 {
   line-height: 1.45;
 }
 
-.vc-item:hover .vc-title {
-  color: var(--neon-cyan);
-}
-
-.vc-item:hover .vc-num {
-  color: var(--neon-cyan);
-}
-
-.vc-item[open] .vc-title,
-.vc-item[open] .vc-num {
-  color: var(--neon-cyan);
-}
-
-.vc-item[open] .vc-panel {
-  color: rgba(255, 255, 255, 0.78);
-}
 
 /* --- LOCATIONS --- */
 .locations-grid {
