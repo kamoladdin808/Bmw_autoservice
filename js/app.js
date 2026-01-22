@@ -6,10 +6,13 @@
 const translations = {
     de: {
         nav: {
-            advantages: "Vorteile",
-            promotions: "Aktionen",
+            partners: "Partner",
             services: "Leistungen",
-            to: "Wartung (TO)",
+            promotions: "Aktionen",
+            price: "Preise",
+            portfolio: "Referenzen",
+            evacuator: "Abschleppdienst",
+            reviews: "Bewertungen",
             contact: "Kontakt",
             imprint: "Impressum",
             privacy: "Datenschutz",
@@ -36,18 +39,17 @@ const translations = {
             ]
         },
         services: {
-            title: "Unsere Leistungen",
-            subtitle: "Breites Spektrum für Wartung und Reparatur",
-            cta: "Mehr erfahren",
-            cta_primary: "Termin vereinbaren",
-            cta_telegram: "Über Telegram buchen",
+            title: "Alle Leistungen an einem Ort",
+            subtitle: "Volle Verantwortung und lebenslange Garantie",
+            cta_primary: "Anfrage senden",
+            cta_secondary: "Preisliste herunterladen",
             items: [
-                { title: "Wartung & TO", desc: "Ölwechsel, Filtertausch und Bremsenservice nach Werkvorgaben.", icon: '<svg viewBox="0 0 24 24" fill="none" class="icon-svg"><path d="M15 7a4 4 0 0 0-6 3.465V12l-6.5 6.5a2.121 2.121 0 1 0 3 3L12 15h1.535A4 4 0 0 0 15 7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' },
-                { title: "Mechanik", desc: "Fahrwerk, Stoßdämpfer und Motorreparatur mit Garantie.", icon: '<svg viewBox="0 0 24 24" fill="none" class="icon-svg"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>' },
-                { title: "Elektrik", desc: "Fehlersuche und Programmierung mit BMW Diagnosesoftware.", icon: '<svg viewBox="0 0 24 24" fill="none" class="icon-svg"><path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>' },
-                { title: "Klima & CO", desc: "Befüllung, Reinigung und Desinfektion der Klimaanlage.", icon: '<svg viewBox="0 0 24 24" fill="none" class="icon-svg"><path d="M12 2V6M12 18V22M4.93 4.93L7.76 7.76M16.24 16.24L19.07 19.07M2 12H6M18 12H22M4.93 19.07L7.76 16.24M16.24 7.76L19.07 4.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>' },
-                { title: "Detailing", desc: "Premium-Wäsche, Politur und Keramikversiegelung für Ihren BMW.", icon: '<svg viewBox="0 0 24 24" fill="none" class="icon-svg"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>' },
-                { title: "Zubehör", desc: "Nachrüstung von Original BMW Teilen und Software-Updates.", icon: '<svg viewBox="0 0 24 24" fill="none" class="icon-svg"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M12 8V16M8 12H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>' }
+                { title: "Benzin- und Dieselmotoren", desc: "Fahrzeuge aller Marken." },
+                { title: "Karosseriearbeiten", desc: "Stoßfänger, Haube, Unfallreparatur." },
+                { title: "Elektrik", desc: "Alarmanlagen, Parksensoren, Multimedia." },
+                { title: "Getriebereparatur", desc: "Automatik, CVT, einzelne Baugruppen." },
+                { title: "Mechanik/Service", desc: "Ölwechsel, Filter, Wartung." },
+                { title: "Detailing", desc: "Kratzer entfernen, Folierung, Politur." }
             ]
         },
         examples: {
@@ -55,46 +57,31 @@ const translations = {
             subtitle: "Ein Einblick in unsere tägliche Qualitätsarbeit"
         },
         contact: {
-            title: "Kontakt",
-            subtitle: "Wir sind für Sie da",
-            form_name: "Ihr Name",
-            form_email: "E-Mail Adresse",
-            form_phone: "Telefonnummer",
-            form_message: "Ihre Nachricht",
-            form_submit: "Nachricht senden",
-            form_error: "Bitte füllen Sie alle Pflichtfelder aus.",
-            form_success: "Vielen Dank! Ihre Nachricht wurde gesendet. Wir melden uns schnellstmöglich bei Ihnen.",
-            email_error: "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+            title: "Unsere Kontakte",
             info_address: "Moskau, Prospekt Vernadskogo 36",
-            info_phone: "+7 (999) 123-45-67",
-            info_hours: "Mo-So 09:00 - 21:00"
+            info_phone: "+7 (444) 444-44-44",
+            info_hours: "Mo-Sa 10:00 - 19:00",
+            info_email: "info@avto.ru",
+            online: "Schreiben Sie uns, wir sind online",
+            socials: "Wir sind in sozialen Netzwerken",
+            legal: "Requisiten für juristische Personen",
+            map_title: "Büroadresse:",
+            map_link: "Übergangspläne ansehen"
         },
         stats: {
-            years: "14+",
-            years_text: "Jahre Erfahrung",
-            rating: "5.0",
-            rating_text: "Bewertung",
-            clients: "10.000+",
-            clients_text: "Zufriedene Kunden"
+            items: [
+                { value: "8+", label: "Jahre am Markt" },
+                { value: "5.0", label: "Service-Bewertung" },
+                { value: "100 m²", label: "Werkstattfläche" }
+            ]
         },
         promotions: {
-            title: "Serviceangebote",
-            subtitle: "Aktuelle Aktionen und Sonderangebote",
+            title: "Aktuelle Aktionen und Rabatte",
+            subtitle: "Wir kümmern uns um Ihr Budget",
             items: [
-                { title: "Fahrzeugaufbewahrung an Feiertagen", desc: "Lagerung + выгодный сервис в праздники.", label: "Special", icon: '<svg viewBox="0 0 24 24" fill="none" class="promo-icon"><path d="M3 11L12 3L21 11V21H3V11Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>' },
-                { title: "Elektronik-Diagnose", desc: "Diagnose der elektronischen Systeme.", label: "2.990 ₽", icon: '<svg viewBox="0 0 24 24" fill="none" class="promo-icon"><path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' },
-                { title: "Diagnose als Geschenk", desc: "Kostenlos bei Paket-TO.", label: "Gift", icon: '<svg viewBox="0 0 24 24" fill="none" class="promo-icon"><path d="M20 12V22H4V12" stroke="currentColor" stroke-width="2"/><path d="M2 7H22V12H2V7Z" stroke="currentColor" stroke-width="2"/><path d="M12 22V7" stroke="currentColor" stroke-width="2"/><path d="M12 7C12 7 10 7 9 6C8 5 8 3 10 3C12 3 12 7 12 7Z" stroke="currentColor" stroke-width="2"/><path d="M12 7C12 7 14 7 15 6C16 5 16 3 14 3C12 3 12 7 12 7Z" stroke="currentColor" stroke-width="2"/></svg>' },
-                { title: "Ölwechsel", desc: "Ölwechsel nach BMW-Standard.", label: "12.900 ₽", icon: '<svg viewBox="0 0 24 24" fill="none" class="promo-icon"><path d="M7 7h10v10a5 5 0 0 1-10 0V7Z" stroke="currentColor" stroke-width="2"/><path d="M9 3h6v4H9V3Z" stroke="currentColor" stroke-width="2"/></svg>' },
-                { title: "Neukunden-Vorteil", desc: "50% auf den ersten Besuch.", label: "-50%", icon: '<svg viewBox="0 0 24 24" fill="none" class="promo-icon"><path d="M19 5L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M6.5 6.5H6.51M17.5 17.5H17.51" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>' },
-                { title: "BMW 2020+ Ölservice", desc: "Fixpreis für BMW ab 2020.", label: "Fix", icon: '<svg viewBox="0 0 24 24" fill="none" class="promo-icon"><path d="M4 7H20" stroke="currentColor" stroke-width="2"/><path d="M6 7V19H18V7" stroke="currentColor" stroke-width="2"/><path d="M9 11H15" stroke="currentColor" stroke-width="2"/></svg>' },
-                { title: "Sonderdiagnose", desc: "Schneller Check wichtiger Systeme.", label: "Check", icon: '<svg viewBox="0 0 24 24" fill="none" class="promo-icon"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' },
-                { title: "Fahrwerk — Meisterwerk", desc: "Komplexe Fahrwerksprüfung.", label: "Pro", icon: '<svg viewBox="0 0 24 24" fill="none" class="promo-icon"><path d="M7 4v16M17 4v16M7 12h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>' },
-                { title: "Paket-TO Fixpreis", desc: "Komplexe Wartung nach Paket.", label: "4-6-8", icon: '<svg viewBox="0 0 24 24" fill="none" class="promo-icon"><path d="M4 4h16v16H4V4Z" stroke="currentColor" stroke-width="2"/><path d="M8 9h8M8 12h8M8 15h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>' },
-                { title: "Ölservice ab", desc: "Maslo-Service ab 8.000 ₽.", label: "8.000 ₽", icon: '<svg viewBox="0 0 24 24" fill="none" class="promo-icon"><path d="M12 2v20" stroke="currentColor" stroke-width="2"/><path d="M7 7h10v10H7V7Z" stroke="currentColor" stroke-width="2"/></svg>' },
-                { title: "Getriebeölwechsel", desc: "ATF-Wechsel zum Fixpreis.", label: "Fix", icon: '<svg viewBox="0 0 24 24" fill="none" class="promo-icon"><path d="M8 6h8v12H8V6Z" stroke="currentColor" stroke-width="2"/><path d="M6 10h2M16 10h2M6 14h2M16 14h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>' },
-                { title: "Saisonaler Reifenservice", desc: "Reifenwechsel + Auswuchten.", label: "Season", icon: '<svg viewBox="0 0 24 24" fill="none" class="promo-icon"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="2"/></svg>' },
-                { title: "Karosserie Fixpreis", desc: "Karosseriearbeiten nach Preisformel.", label: "Fix", icon: '<svg viewBox="0 0 24 24" fill="none" class="promo-icon"><path d="M4 15l4-8h8l4 8" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M6 15h12v5H6v-5Z" stroke="currentColor" stroke-width="2"/></svg>' },
-                { title: "Bremsen — Meisterwerk", desc: "Bremsenservice nach Standard.", label: "Pro", icon: '<svg viewBox="0 0 24 24" fill="none" class="promo-icon"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>' }
+                { title: "Kostenlose Motordiagnose", desc: "Klicken Sie auf „Teilnehmen“, um Details zu erhalten.", cta: "An der Aktion teilnehmen", img: "img/promo-1.jpg" },
+                { title: "20% Rabatt auf Reparaturen", desc: "Bis Ende des Monats. Details per Klick.", cta: "An der Aktion teilnehmen", img: "img/promo-2.jpg" },
+                { title: "Ratenzahlung 0%", desc: "Von der Partnerbank in 30 Sekunden.", cta: "An der Aktion teilnehmen", img: "img/promo-3.jpg" }
             ]
         },
         to: {
@@ -108,12 +95,18 @@ const translations = {
             ]
         },
         consult: {
-            title: "Brauchen Sie eine Meisterberatung?",
-            subtitle: "Rufen Sie an oder hinterlassen Sie eine Anfrage – wir helfen gern.",
-            form_name: "Ihr Name",
+            title: "Wir rufen Sie zurück und beraten",
             form_phone: "Telefonnummer",
-            consent: "Ich stimme der Verarbeitung personenbezogener Daten zu",
-            submit: "Senden"
+            consent: "Ich stimme der Datenschutzerklärung zu",
+            submit: "Rufen Sie mich zurück",
+            hours: "Mo-Sa 9:00 - 18:00;",
+            messengers: "Schreiben Sie uns im Messenger",
+            items: [
+                "Wir erklären den Ablauf und beantworten Fragen;",
+                "Wir klären das Problem;",
+                "Wir nennen Kosten und Zeitrahmen;",
+                "Wir buchen Sie für einen passenden Termin"
+            ]
         },
         video: {
             title: "Video Capture",
@@ -137,13 +130,13 @@ const translations = {
             map_link: "Auf Yandex Maps öffnen"
         },
         process: {
-            title: "In 4 Schritten zum Ziel",
-            subtitle: "So einfach funktioniert unser Service",
+            title: "In 4 Schritten zur Behebung",
+            subtitle: "Fertig in 1-2 Tagen",
             steps: [
-                { title: "Beratung", desc: "Wir beantworten Ihre Fragen und klären den Ablauf." },
-                { title: "Diagnose", desc: "Wir finden die genaue Ursache des Problems." },
-                { title: "Kalkulation", desc: "Transparente Kosten- und Zeitplanung." },
-                { title: "Übergabe", desc: "Perfekt repariertes Fahrzeug zum Wunschtermin." }
+                { title: "Schritt 1: Anruf", desc: "Wir klären Marke, Modell und Problem. Sie können auch online anfragen.", phone: "+7(495) 444-44-44", cta: "ANFRAGE SENDEN", img: "img/step-1.jpg" },
+                { title: "Schritt 2: Diagnose", desc: "Wir führen eine vollständige Diagnose durch.", img: "img/step-2.jpg" },
+                { title: "Schritt 3: Reparatur", desc: "Wir erledigen alle notwendigen Arbeiten.", img: "img/step-3.jpg" },
+                { title: "Schritt 4: Übergabe", desc: "Sie prüfen und bezahlen erst danach. Sie erhalten Check und Auftrag.", img: "img/step-4.jpg" }
             ]
         },
         legal: {
@@ -166,16 +159,64 @@ const translations = {
             placeholder: "Karte wird erst nach Zustimmung geladen",
             load: "Karte laden"
         },
+        partners: {
+            title: "Wir bedienen alle beliebten Marken",
+            subtitle: "Für Unternehmen und Privatkunden",
+            logos: [
+                { src: "img/brand-mers.svg", alt: "Mercedes" },
+                { src: "img/brand-opel.svg", alt: "Opel" },
+                { src: "img/brand-audi.svg", alt: "Audi" },
+                { src: "img/brand-mini.svg", alt: "Mini" },
+                { src: "img/brand-volvo.svg", alt: "Volvo" },
+                { src: "img/brand-vw.svg", alt: "Volkswagen" },
+                { src: "img/brand-toyota.svg", alt: "Toyota" },
+                { src: "img/brand-honda.svg", alt: "Honda" }
+            ]
+        },
+        price: {
+            title: "Wir garantieren den besten Preis am Markt",
+            subtitle: "Laden Sie die komplette Preisliste herunter",
+            delivery_title: "Wählen Sie, wo Sie es erhalten möchten",
+            whatsapp: "Per WhatsApp erhalten",
+            telegram: "Per Telegram erhalten",
+            viber: "Per Viber erhalten",
+            get: "Preisliste erhalten",
+            consent: "Ich stimme der Datenschutzerklärung zu",
+            updated: "Aktualisiert: 13.07.2022"
+        },
+        portfolio: {
+            title: "Arbeitsportfolio",
+            subtitle: "Beispiele durchgeführter Arbeiten",
+            cta: "Zum Portfolio",
+            items: [
+                { title: "Motorreparatur KIA Sorento", desc: "Komplexe Reparatur nach Unfall in 2 Tagen.", img: "img/portfolio-1.jpg", cta: "Mehr erfahren", badge: "+ Foto" },
+                { title: "Karosseriearbeiten Honda", desc: "Wiederherstellung beschädigter Teile.", img: "img/portfolio-2.jpg", cta: "Mehr erfahren", badge: "+ Foto" },
+                { title: "Lackierung Opel", desc: "Komplexe Lackierarbeiten und Vorbereitung.", img: "img/portfolio-3.jpg", cta: "Mehr erfahren", badge: "+ Foto" },
+                { title: "Getriebereparatur Volkswagen", desc: "Wellenwechsel und Ölservice.", img: "img/portfolio-4.jpg", cta: "Mehr erfahren", badge: "+ Foto" },
+                { title: "Achsmessung Subaru", desc: "Arbeiten auf Spezialstand.", img: "img/portfolio-5.jpg", cta: "Mehr erfahren", badge: "+ Foto" },
+                { title: "Wartung Mercedes", desc: "Öl, Kerzen, Filter, Komplettdiagnose.", img: "img/portfolio-6.jpg", cta: "Mehr erfahren", badge: "+ Foto" }
+            ]
+        },
+        evacuator: {
+            title: "Abschleppdienst kostenlos innerhalb des MKAD",
+            subtitle: "Schreiben Sie uns einfach in WhatsApp",
+            cta: "In WhatsApp schreiben"
+        },
+        seo: {
+            title: "Autowerkstatt für Reparatur und Wartung",
+            text: "Zuverlässigkeit und Funktionalität eines Fahrzeugs hängen direkt vom technischen Zustand ab. Regelmäßige Diagnose und Wartung helfen, teure Reparaturen zu vermeiden und die Sicherheit zu erhöhen."
+        },
         brands: {
             title: "Kompetenz für alle BMW Linien",
             items: ["M Power", "Alpina", "Individual", "i-Series", "X-Drive"]
         },
         advantages: {
-            title: "Ihre Vorteile bei uns",
+            title: "Warum Sie uns vertrauen können",
             items: [
-                { title: "2 Jahre Garantie", desc: "Auf alle ausgeführten Arbeiten und verbauten Originalteile." },
-                { title: "Teile auf Lager", desc: "Über 5.000 BMW Originalteile direkt ab Lager verfügbar." },
-                { title: "Meisterbetrieb", desc: "Zertifizierte BMW-Techniker mit langjähriger Erfahrung." }
+                { title: "01", desc: "Zertifiziertes deutsches Equipment" },
+                { title: "02", desc: "Lebenslange Garantie auf alle Arbeiten" },
+                { title: "03", desc: "Fixe Kosten ohne Aufschläge" },
+                { title: "04", desc: "Experten, die Ihr Auto blind zerlegen" }
             ]
         },
         cta_banner: {
@@ -188,11 +229,12 @@ const translations = {
             desc: "Innerhalb Moskaus bringen wir Ihren BMW kostenlos in unsere Werkstatt, wenn die Reparatur bei uns durchgeführt wird."
         },
         reviews: {
-            title: "Was unsere Kunden sagen",
+            title: "Bewertungen",
+            subtitle: "Am besten sprechen unsere Kunden über uns",
             items: [
-                { name: "Maximilian S.", text: "Hervorragender Service für meinen M4. Kompetent und transparent.", rating: 5 },
-                { name: "Elena K.", text: "Schnelle Diagnose und faire Preise. Komme gerne wieder.", rating: 5 },
-                { name: "Thomas W.", text: "Endlich eine Werkstatt, die BMW wirklich versteht.", rating: 5 }
+                { name: "Maximilian S.", text: "Hervorragender Service. Kompetent und transparent.", rating: 5 },
+                { name: "Elena K.", text: "Schnelle Diagnose und faire Preise.", rating: 5 },
+                { name: "Thomas W.", text: "Sehr professionelles Team.", rating: 5 }
             ]
         },
         reality: {
@@ -242,10 +284,13 @@ const translations = {
     },
     ru: {
         nav: {
-            advantages: "Преимущества",
-            promotions: "Акции",
+            partners: "Партнеры",
             services: "Услуги",
-            to: "ТО",
+            promotions: "Акции",
+            price: "Стоимость",
+            portfolio: "Примеры работ",
+            evacuator: "Эвакуатор",
+            reviews: "Отзывы",
             contact: "Контакты",
             imprint: "Импрессум",
             privacy: "Конфиденциальность",
@@ -272,18 +317,17 @@ const translations = {
             ]
         },
         services: {
-            title: "Наши услуги",
-            subtitle: "Широкий спектр услуг для обслуживания и ремонта",
-            cta: "Подробнее",
-            cta_primary: "Записаться",
-            cta_telegram: "Записаться через Telegram",
+            title: "Все услуги в одном месте",
+            subtitle: "Несем полную ответственность и даем бессрочную гарантию",
+            cta_primary: "Оставить заявку",
+            cta_secondary: "Скачать прайс",
             items: [
-                { title: "ТО и Обслуживание", desc: "Замена масла, фильтров и тормозов по стандартам BMW.", icon: '<svg viewBox="0 0 24 24" fill="none" class="icon-svg"><path d="M15 7a4 4 0 0 0-6 3.465V12l-6.5 6.5a2.121 2.121 0 1 0 3 3L12 15h1.535A4 4 0 0 0 15 7Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' },
-                { title: "Слесарный ремонт", desc: "Ремонт ходовой, двигателя и подвески с гарантией.", icon: '<svg viewBox="0 0 24 24" fill="none" class="icon-svg"><circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>' },
-                { title: "Электрика", desc: "Диагностика и программирование дилерским софтом.", icon: '<svg viewBox="0 0 24 24" fill="none" class="icon-svg"><path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>' },
-                { title: "Кондиционер", desc: "Заправка, чистка и антибактериальная обработка.", icon: '<svg viewBox="0 0 24 24" fill="none" class="icon-svg"><path d="M12 2V6M12 18V22M4.93 4.93L7.76 7.76M16.24 16.24L19.07 19.07M2 12H6M18 12H22M4.93 19.07L7.76 16.24M16.24 7.76L19.07 4.93" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>' },
-                { title: "Детейлинг", desc: "Премиум-мойка, полировка и керамика для вашего авто.", icon: '<svg viewBox="0 0 24 24" fill="none" class="icon-svg"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>' },
-                { title: "Доп. услуги", desc: "Установка оригинального оборудования и обновление ПО.", icon: '<svg viewBox="0 0 24 24" fill="none" class="icon-svg"><rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/><path d="M12 8V16M8 12H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>' }
+                { title: "Ремонт бензиновых и дизельных двигателей", desc: "Авто любых марок." },
+                { title: "Все типы кузовного ремонта", desc: "Ремонт бампера, капота, после ДТП." },
+                { title: "Электрика", desc: "Сигнализации, парктроники, мультимедиа." },
+                { title: "Ремонт АКПП", desc: "Роботы, вариаторы, отдельные узлы коробки." },
+                { title: "Слесарный цех", desc: "Замена масла, фильтров, техобслуживание." },
+                { title: "Детейлинг", desc: "Удаление царапин, оклейка, полировка." }
             ]
         },
         examples: {
@@ -291,46 +335,31 @@ const translations = {
             subtitle: "Взгляд на наше ежедневное стремление к качеству"
         },
         contact: {
-            title: "Контакты",
-            subtitle: "Мы всегда на связи",
-            form_name: "Ваше имя",
-            form_email: "Ваш Email",
-            form_phone: "Номер телефона",
-            form_message: "Ваше сообщение",
-            form_submit: "Отправить сообщение",
-            form_error: "Пожалуйста, заполните все обязательные поля.",
-            form_success: "Спасибо! Ваше сообщение отправлено. Мы свяжемся с вами в ближайшее время.",
-            email_error: "Пожалуйста, введите корректный адрес электронной почты.",
-            info_address: "Москва, проспект Вернадского, 36",
-            info_phone: "+7 (999) 123-45-67",
-            info_hours: "Пн-Вс 09:00 - 21:00"
+            title: "Наши контакты",
+            info_address: "Москва, пр-т Вернадского, 36",
+            info_phone: "+7 (444) 444-44-44",
+            info_hours: "Пн-Сб 10:00 - 19:00",
+            info_email: "info@avto.ru",
+            online: "Пишите, мы онлайн",
+            socials: "Мы в соцсетях",
+            legal: "Реквизиты для юр. лиц",
+            map_title: "Адреса офиса:",
+            map_link: "Посмотреть схемы перехода"
         },
         stats: {
-            years: "14+",
-            years_text: "Лет опыта",
-            rating: "5.0",
-            rating_text: "Рейтинг",
-            clients: "10.000+",
-            clients_text: "Довольных клиентов"
+            items: [
+                { value: "8+", label: "лет на рынке ремонта авто" },
+                { value: "5.0", label: "Рейтинг автосервиса" },
+                { value: "100 м²", label: "площадь автосервиса" }
+            ]
         },
         promotions: {
-            title: "Сервисные предложения",
-            subtitle: "Актуальные акции и специальные предложения",
+            title: "Заботимся о бюджете. Актуальные акции и скидки",
+            subtitle: "Нажмите на кнопку, чтобы узнать подробности",
             items: [
-                { title: "Хранение автомобиля в праздники", desc: "Хранение + выгодный сервис.", label: "Special", icon: '<svg viewBox="0 0 24 24" fill="none" class="promo-icon"><path d="M3 11L12 3L21 11V21H3V11Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>' },
-                { title: "Диагностика электронных систем", desc: "Быстрая диагностика электроники.", label: "2 990 ₽", icon: '<svg viewBox="0 0 24 24" fill="none" class="promo-icon"><path d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' },
-                { title: "Диагностика в подарок", desc: "При пакетном ТО — бесплатно.", label: "Подарок", icon: '<svg viewBox="0 0 24 24" fill="none" class="promo-icon"><path d="M20 12V22H4V12" stroke="currentColor" stroke-width="2"/><path d="M2 7H22V12H2V7Z" stroke="currentColor" stroke-width="2"/><path d="M12 22V7" stroke="currentColor" stroke-width="2"/><path d="M12 7C12 7 10 7 9 6C8 5 8 3 10 3C12 3 12 7 12 7Z" stroke="currentColor" stroke-width="2"/><path d="M12 7C12 7 14 7 15 6C16 5 16 3 14 3C12 3 12 7 12 7Z" stroke="currentColor" stroke-width="2"/></svg>' },
-                { title: "Замена масла", desc: "По стандарту BMW.", label: "12 900 ₽", icon: '<svg viewBox="0 0 24 24" fill="none" class="promo-icon"><path d="M7 7h10v10a5 5 0 0 1-10 0V7Z" stroke="currentColor" stroke-width="2"/><path d="M9 3h6v4H9V3Z" stroke="currentColor" stroke-width="2"/></svg>' },
-                { title: "Выгода на первый визит", desc: "Скидка 50% для новых клиентов.", label: "-50%", icon: '<svg viewBox="0 0 24 24" fill="none" class="promo-icon"><path d="M19 5L5 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M6.5 6.5H6.51M17.5 17.5H17.51" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>' },
-                { title: "Масляный сервис BMW 2020+", desc: "Фиксированная цена для BMW 2020+.", label: "Fix", icon: '<svg viewBox="0 0 24 24" fill="none" class="promo-icon"><path d="M4 7H20" stroke="currentColor" stroke-width="2"/><path d="M6 7V19H18V7" stroke="currentColor" stroke-width="2"/><path d="M9 11H15" stroke="currentColor" stroke-width="2"/></svg>' },
-                { title: "Спецпредложения по диагностике", desc: "Проверка ключевых систем.", label: "Check", icon: '<svg viewBox="0 0 24 24" fill="none" class="promo-icon"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' },
-                { title: "Подвеска — шедевр", desc: "Комплексная проверка подвески.", label: "Pro", icon: '<svg viewBox="0 0 24 24" fill="none" class="promo-icon"><path d="M7 4v16M17 4v16M7 12h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>' },
-                { title: "Комплексное ТО по фиксированной цене", desc: "Пакеты обслуживания 4-6-8.", label: "4-6-8", icon: '<svg viewBox="0 0 24 24" fill="none" class="promo-icon"><path d="M4 4h16v16H4V4Z" stroke="currentColor" stroke-width="2"/><path d="M8 9h8M8 12h8M8 15h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>' },
-                { title: "Масляный сервис от 8 000 ₽", desc: "Оптимальный сервис масла.", label: "8 000 ₽", icon: '<svg viewBox="0 0 24 24" fill="none" class="promo-icon"><path d="M12 2v20" stroke="currentColor" stroke-width="2"/><path d="M7 7h10v10H7V7Z" stroke="currentColor" stroke-width="2"/></svg>' },
-                { title: "Замена масла в АКПП", desc: "Фиксированная цена.", label: "Fix", icon: '<svg viewBox="0 0 24 24" fill="none" class="promo-icon"><path d="M8 6h8v12H8V6Z" stroke="currentColor" stroke-width="2"/><path d="M6 10h2M16 10h2M6 14h2M16 14h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>' },
-                { title: "Сезонный шиномонтаж", desc: "Шины, балансировка, хранение.", label: "Season", icon: '<svg viewBox="0 0 24 24" fill="none" class="promo-icon"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="2"/></svg>' },
-                { title: "Кузовной ремонт по фиксированной цене", desc: "По формуле стоимости.", label: "Fix", icon: '<svg viewBox="0 0 24 24" fill="none" class="promo-icon"><path d="M4 15l4-8h8l4 8" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M6 15h12v5H6v-5Z" stroke="currentColor" stroke-width="2"/></svg>' },
-                { title: "Тормозная система — шедевр", desc: "Обслуживание тормозов.", label: "Pro", icon: '<svg viewBox="0 0 24 24" fill="none" class="promo-icon"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/><path d="M12 7v10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>' }
+                { title: "Бесплатная диагностика двигателя", desc: "Нажмите на кнопку “Участвовать в акции” чтобы узнать подробности", cta: "Учавствовать в акции", img: "img/promo-1.jpg" },
+                { title: "Скидка 20% на ремонт до конца месяца", desc: "Нажмите на кнопку “Участвовать в акции” чтобы узнать подробности", cta: "Учавствовать в акции", img: "img/promo-2.jpg" },
+                { title: "Рассрочка под 0% или кредит", desc: "От Тинькофф-банка. За 30 секунд", cta: "Учавствовать в акции", img: "img/promo-3.jpg" }
             ]
         },
         to: {
@@ -344,12 +373,18 @@ const translations = {
             ]
         },
         consult: {
-            title: "Требуется консультация мастера?",
-            subtitle: "Звоните или оставьте заявку и мы ответим на все Ваши вопросы",
-            form_name: "Ваше имя",
+            title: "Перезвоним и проконсультируем",
             form_phone: "Номер телефона",
-            consent: "Я согласен(на) на обработку персональных данных",
-            submit: "Отправить"
+            consent: "Согласен с условиями политики конфиденциальности данных",
+            submit: "Перезвоните мне",
+            hours: "Пн-Сб с 9:00 до 18:00;",
+            messengers: "Пишите нам в мессенджер",
+            items: [
+                "Расскажем как мы работаем и ответим на вопросы;",
+                "Выясним в чем проблема;",
+                "Сориентируем по стоимости и срокам ремонта;",
+                "Если все устроит, запишем вас на удобное время"
+            ]
         },
         video: {
             title: "Video Capture",
@@ -373,13 +408,13 @@ const translations = {
             map_link: "Открыть в Яндекс Картах"
         },
         process: {
-            title: "Всего 4 шага к цели",
-            subtitle: "Быстро и профессионально исправим любую поломку",
+            title: "Всего 4 шага к устранению неисправности",
+            subtitle: "Ваш автомобиль будет готов за 1-2 дня",
             steps: [
-                { title: "Консультация", desc: "Расскажем как мы работаем и ответим на вопросы." },
-                { title: "Диагностика", desc: "Выясним в чем именно проблема." },
-                { title: "Расчет", desc: "Сориентируем по точной стоимости и срокам." },
-                { title: "Результат", desc: "Запишем вас на удобное время и вернем исправное авто." }
+                { title: "Шаг 1", desc: "Звоните: +7(495) 444-44-44. На первичной консультации выясняем марку и модель авто, определяем проблему, ориентируем по стоимости. Или оставляйте заявку на сайте.", phone: "+7(495) 444-44-44", cta: "ОСТАВИТЬ ЗАЯВКУ", img: "img/step-1.jpg" },
+                { title: "Шаг 2", desc: "Диагностика у нас в автосервисе. Проводим полную диагностику, по результатам которой будет точно понятна проблема и способы ее устранения.", img: "img/step-2.jpg" },
+                { title: "Шаг 3", desc: "Обслуживание и ремонт. Выполняем все необходимые работы.", img: "img/step-3.jpg" },
+                { title: "Шаг 4", desc: "Приемка работ. Проверяете и только тогда оплачиваете, получаете чек и заказ-наряд.", img: "img/step-4.jpg" }
             ]
         },
         legal: {
@@ -402,16 +437,64 @@ const translations = {
             placeholder: "Карта загружается только после согласия",
             load: "Загрузить карту"
         },
+        partners: {
+            title: "Обслуживаем все популярные марки",
+            subtitle: "Для юридических и физических лиц",
+            logos: [
+                { src: "img/brand-mers.svg", alt: "Mercedes" },
+                { src: "img/brand-opel.svg", alt: "Opel" },
+                { src: "img/brand-audi.svg", alt: "Audi" },
+                { src: "img/brand-mini.svg", alt: "Mini" },
+                { src: "img/brand-volvo.svg", alt: "Volvo" },
+                { src: "img/brand-vw.svg", alt: "Volkswagen" },
+                { src: "img/brand-toyota.svg", alt: "Toyota" },
+                { src: "img/brand-honda.svg", alt: "Honda" }
+            ]
+        },
+        price: {
+            title: "Гарантируем лучшую цену на рынке",
+            subtitle: "Скачайте полный прайс-лист на услуги",
+            delivery_title: "Выберите где удобнее получить?",
+            whatsapp: "Получить в WhatsApp",
+            telegram: "Получить в Telegram",
+            viber: "Получить в Viber",
+            get: "ПОЛУЧИТЬ ПРАЙС",
+            consent: "Cогласен с условиями политики конфиденциальности данных",
+            updated: "Обновлен: 13.07.2022"
+        },
+        portfolio: {
+            title: "С 2012 года отремонтировали и обслужили бесчисленное количество автомобилей",
+            subtitle: "Портфолио работ за 2022-2023 года",
+            cta: "Перейти в портфолио",
+            items: [
+                { title: "Ремонт двигателя KIA Sorento", desc: "За 2 дня выполнили комплексный ремонт двигателя после аварии", img: "img/portfolio-1.jpg", cta: "Смотреть подробнее", badge: "+ фото" },
+                { title: "Кузовной ремонт Honda", desc: "Комплексные работы по восстановлению поврежденных частей кузова", img: "img/portfolio-2.jpg", cta: "Смотреть подробнее", badge: "+ фото" },
+                { title: "Покраска Opel", desc: "Комплексные работы по восстановлению поврежденных частей кузова", img: "img/portfolio-3.jpg", cta: "Смотреть подробнее", badge: "+ фото" },
+                { title: "Ремонт АКПП Volkswagen", desc: "Замена первичного вала привода коробки передач, замена масла.", img: "img/portfolio-4.jpg", cta: "Смотреть подробнее", badge: "+ фото" },
+                { title: "Сход-развал Subaru", desc: "Выполнение регламентных работ по подвеске автомобиля на специализированном стенде.", img: "img/portfolio-5.jpg", cta: "Смотреть подробнее", badge: "+ фото" },
+                { title: "ТО Mercedes", desc: "Замена масла, свечей зажигания, фильтров, общая диагностика автомобиля.", img: "img/portfolio-6.jpg", cta: "Смотреть подробнее", badge: "+ фото" }
+            ]
+        },
+        evacuator: {
+            title: "Эвакуатор бесплатно в пределах МКАД",
+            subtitle: "Просто напишите нам в WhatsApp",
+            cta: "Написать в Whatsapp"
+        },
+        seo: {
+            title: "Автосервис по ремонту и обслуживанию автомобилей",
+            text: "Надежность и функциональность автомобиля напрямую зависит от его технического состояния. Регулярная диагностика и своевременное обслуживание позволяют избежать дорогостоящего ремонта и повышают безопасность."
+        },
         brands: {
             title: "Компетенция во всех линейках BMW",
             items: ["M Power", "Alpina", "Individual", "i-Series", "X-Drive"]
         },
         advantages: {
-            title: "Ваши преимущества у нас",
+            title: "Ответим, почему вы можете довериться нам",
             items: [
-                { title: "2 года гарантии", desc: "На все выполненные работы и установленные оригинальные детали." },
-                { title: "Запчасти в наличии", desc: "Более 5.000 оригинальных деталей BMW на складе." },
-                { title: "Мастера-эксперты", desc: "Сертифицированные техники BMW с многолетним опытом." }
+                { title: "01", desc: "Сертифицированное немецкое оборудование" },
+                { title: "02", desc: "Бессрочная гарантия на все работы" },
+                { title: "03", desc: "Стоимость фиксированная без скрытых платежей" },
+                { title: "04", desc: "Специалисты, которые могут собрать/разобрать авто с закрытыми глазами" }
             ]
         },
         cta_banner: {
@@ -424,11 +507,12 @@ const translations = {
             desc: "В пределах Москвы мы бесплатно доставим ваш BMW в наш сервис, если ремонт будет проводиться у нас."
         },
         reviews: {
-            title: "Что говорят наши клиенты",
+            title: "Отзывы",
+            subtitle: "Лучше всего о нашей работе скажут клиенты",
             items: [
-                { name: "Максим С.", text: "Отличный сервис для моего M4. Компетентно и прозрачно.", rating: 5 },
-                { name: "Елена К.", text: "Быстрая диагностика и честные цены. Буду обращаться еще.", rating: 5 },
-                { name: "Томас В.", text: "Наконец-то нашел сервис, который действительно понимает BMW.", rating: 5 }
+                { name: "Максим С.", text: "Отличный сервис. Компетентно и прозрачно.", rating: 5 },
+                { name: "Елена К.", text: "Быстрая диагностика и честные цены.", rating: 5 },
+                { name: "Томас В.", text: "Профессиональная команда, все четко.", rating: 5 }
             ]
         },
         reality: {
@@ -667,6 +751,55 @@ class BMWApp {
                 consultForm.reset();
             });
         }
+
+        // Image Lightbox Handler
+        this.initLightbox();
+    }
+
+    initLightbox() {
+        // Create lightbox HTML if not exists
+        if (!document.getElementById('lightbox')) {
+            const lightboxHTML = `
+                <div id="lightbox" class="lightbox">
+                    <span class="lightbox-close">&times;</span>
+                    <img class="lightbox-content" id="lightbox-img" alt="">
+                </div>
+            `;
+            document.body.insertAdjacentHTML('beforeend', lightboxHTML);
+        }
+
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.querySelector('.lightbox-close');
+
+        // Add click handlers to all images (certificates, reviews photos, portfolio, contacts)
+        const lightboxImages = document.querySelectorAll('.certificates-slider img, .reviews-photos-gallery img, .portfolio-card img, .portfolio-media img, .contact-gallery img');
+        lightboxImages.forEach(img => {
+            img.style.cursor = 'pointer';
+            img.addEventListener('click', () => {
+                lightbox.style.display = 'flex';
+                lightboxImg.src = img.src;
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close lightbox
+        const closeLightbox = () => {
+            lightbox.style.display = 'none';
+            document.body.style.overflow = '';
+        };
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.style.display === 'flex') {
+                closeLightbox();
+            }
+        });
     }
 
     bindHashLinkScrolling({ mobBtn, navLinks } = {}) {
@@ -791,90 +924,77 @@ class BMWApp {
             `).join('');
         }
 
-        // Update Brands (Information)
-        const brandsContainer = document.getElementById('brands-container');
-        if (brandsContainer) {
-            brandsContainer.innerHTML = data.brands.items.map(brand => `
-                <div class="brand-item"><span>${brand}</span></div>
+        // Update Partners logos
+        const partnersLogos = document.getElementById('partners-logos');
+        if (partnersLogos && data.partners?.logos) {
+            partnersLogos.innerHTML = data.partners.logos.map(logo => `
+                <div class="partner-logo">
+                    <img src="${logo.src}" alt="${logo.alt || ''}" loading="lazy" decoding="async">
+                </div>
             `).join('');
         }
 
-        // Update Advantages (Information)
+        // Update Advantages (Why trust)
         const advantagesGrid = document.getElementById('advantages-grid');
-        if (advantagesGrid) {
+        if (advantagesGrid && data.advantages?.items) {
             advantagesGrid.innerHTML = data.advantages.items.map(adv => `
                 <div class="adv-card scroll-reveal">
                     <h3>${adv.title}</h3>
-                    <p>${adv.text || adv.desc}</p>
+                    <p>${adv.desc}</p>
                 </div>
             `).join('');
         }
 
         // Update Services Grid
         const grid = document.getElementById('services-grid');
-        if (grid) {
+        if (grid && data.services?.items) {
             grid.innerHTML = data.services.items.map((item, idx) => `
                 <div class="service-card scroll-reveal">
                     <div class="hover-glow"></div>
                     <span class="num">/ 0${idx + 1}</span>
-                    <span class="icon">${item.icon}</span>
                     <h3>${item.title}</h3>
                     <p>${item.desc}</p>
-                    <a href="#contact" class="service-link">
-                        ${data.services.cta} <span>→</span>
-                    </a>
+                    <div class="service-actions">
+                        <a href="#contacts" class="btn-primary">${data.services.cta_primary}</a>
+                        <a href="#download-price" class="btn-secondary">${data.services.cta_secondary}</a>
+                    </div>
                 </div>
             `).join('');
         }
 
-        // Update TO grid
-        const toGrid = document.getElementById('to-grid');
-        if (toGrid && data.to?.items) {
-            toGrid.innerHTML = data.to.items.map((item, idx) => `
-                <div class="service-card scroll-reveal">
-                    <div class="hover-glow"></div>
-                    <span class="num">/ 0${idx + 1}</span>
-                    <span class="icon">${item.icon || ''}</span>
-                    <h3>${item.title}</h3>
-                    <p>${item.desc}</p>
-                    <a href="#contact" class="service-link">
-                        ${data.services?.cta || 'Подробнее'} <span>→</span>
-                    </a>
-                </div>
-            `).join('');
-        }
-
-        // Update Promotions
-        const promoGrid = document.getElementById('promotions-grid');
-        if (promoGrid) {
+        // Update Promotions (Discounts)
+        const promoGrid = document.getElementById('discount-grid');
+        if (promoGrid && data.promotions?.items) {
             promoGrid.innerHTML = data.promotions.items.map(promo => `
                 <div class="promo-card scroll-reveal">
-                    ${promo.icon ? promo.icon : ''}
-                    <div class="promo-label">${promo.label}</div>
+                    ${promo.img ? `<img class="promo-image" src="${promo.img}" alt="" loading="lazy" decoding="async">` : ''}
                     <h3>${promo.title}</h3>
                     <p>${promo.desc}</p>
-                    <a href="#contact" class="service-link" style="margin-top: auto;">${data.services.cta} <span>→</span></a>
+                    ${promo.cta ? `<a href="#contacts" class="btn-secondary promo-cta">${promo.cta}</a>` : ''}
                 </div>
             `).join('');
         }
 
         // Update Process Steps
         const processSteps = document.getElementById('process-steps');
-        if (processSteps) {
+        if (processSteps && data.process?.steps) {
             processSteps.innerHTML = data.process.steps.map((step, idx) => `
                 <div class="process-step scroll-reveal">
+                    ${step.img ? `<img class="step-image" src="${step.img}" alt="" loading="lazy" decoding="async">` : ''}
                     <div class="step-num">${idx + 1}</div>
                     <div class="step-content">
                         <h3>${step.title}</h3>
                         <p>${step.desc}</p>
+                        ${step.phone ? `<a class="step-phone" href="tel:${step.phone.replace(/[^+\\d]/g, '')}">${step.phone}</a>` : ''}
+                        ${step.cta ? `<a class="btn-secondary step-cta" href="#contacts">${step.cta}</a>` : ''}
                     </div>
                 </div>
             `).join('');
         }
 
-        // Update Reviews (Information)
+        // Update Reviews
         const reviewsGrid = document.getElementById('reviews-grid');
-        if (reviewsGrid) {
+        if (reviewsGrid && data.reviews?.items) {
             reviewsGrid.innerHTML = data.reviews.items.map(rev => `
                 <div class="review-card scroll-reveal">
                     <div class="rating">
@@ -889,18 +1009,37 @@ class BMWApp {
             `).join('');
         }
 
-        // Update Locations (3 локации как у донора)
-        const locGrid = document.getElementById('locations-grid');
-        if (locGrid && data.locations?.items) {
-            const mapLinkText = data.locations.map_link || 'Открыть в картах';
-            locGrid.innerHTML = data.locations.items.map(loc => `
-                <div class="location-card" id="loc-${loc.id}">
-                    <h3>${loc.name}</h3>
-                    <p class="text-dim">${loc.address}</p>
-                    <a class="loc-phone" href="tel:${(loc.phone || '').replace(/[^+\\d]/g, '')}">${loc.phone}</a><br>
-                    <a class="service-link loc-map" href="${loc.map}" target="_blank" rel="noopener noreferrer">${mapLinkText} <span>→</span></a>
+        // Update Stats
+        const statsGrid = document.getElementById('stats-grid');
+        if (statsGrid && data.stats?.items) {
+            statsGrid.innerHTML = data.stats.items.map(stat => `
+                <div class="stat-item">
+                    <span class="stat-num">${stat.value}</span>
+                    <span class="stat-label">${stat.label}</span>
                 </div>
             `).join('');
+        }
+
+        // Update Portfolio
+        const portfolioGrid = document.getElementById('portfolio-grid');
+        if (portfolioGrid && data.portfolio?.items) {
+            portfolioGrid.innerHTML = data.portfolio.items.map(item => `
+                <article class="portfolio-card scroll-reveal">
+                    <div class="portfolio-media">
+                        ${item.badge ? `<span class="portfolio-badge">${item.badge}</span>` : ''}
+                        <img src="${item.img}" alt="" loading="lazy" decoding="async">
+                    </div>
+                    <h3>${item.title}</h3>
+                    <p>${item.desc}</p>
+                    <a class="service-link" href="#portfolio">${item.cta} <span>→</span></a>
+                </article>
+            `).join('');
+        }
+
+        // Update Consult list
+        const consultList = document.getElementById('consult-list');
+        if (consultList && data.consult?.items) {
+            consultList.innerHTML = data.consult.items.map(item => `<li>${item}</li>`).join('');
         }
 
         // Re-init reveal for all new items
