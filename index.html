@@ -79,11 +79,14 @@
 
             <div class="nav-links-container flex items-center gap-6">
                 <div class="nav-links flex space-x-10 items-center">
-                    <a href="#advantages" class="nav-link active" data-i18n="nav.advantages">Преимущества</a>
-                    <a href="#promotions" class="nav-link" data-i18n="nav.promotions">Акции</a>
+                    <a href="#partners" class="nav-link active" data-i18n="nav.partners">Партнеры</a>
                     <a href="#services" class="nav-link" data-i18n="nav.services">Услуги</a>
-                    <a href="#to" class="nav-link" data-i18n="nav.to">ТО</a>
-                    <a href="#contact" class="nav-link" data-i18n="nav.contact">Контакты</a>
+                    <a href="#discount" class="nav-link" data-i18n="nav.promotions">Акции</a>
+                    <a href="#download-price" class="nav-link" data-i18n="nav.price">Стоимость</a>
+                    <a href="#portfolio" class="nav-link" data-i18n="nav.portfolio">Примеры работ</a>
+                    <a href="#evacuator" class="nav-link" data-i18n="nav.evacuator">Эвакуатор</a>
+                    <a href="#reviews" class="nav-link" data-i18n="nav.reviews">Отзывы</a>
+                    <a href="#contacts" class="nav-link" data-i18n="nav.contact">Контакты</a>
                 </div>
 
                 <div class="nav-meta flex items-center gap-6">
@@ -135,11 +138,68 @@
             </div>
         </section>
 
-        <!-- 2) ПРЕИМУЩЕСТВА -->
-        <section class="section-padding" id="advantages">
+        <!-- 2) ПАРТНЕРЫ -->
+        <section class="section-padding" id="partners">
             <div class="container">
                 <div class="section-title scroll-reveal">
-                    <h2 data-i18n="advantages.title">Преимущества</h2>
+                    <h2 data-i18n="partners.title">Обслуживаем все популярные марки</h2>
+                    <p class="text-dim" data-i18n="partners.subtitle">Для юридических и физических лиц</p>
+                    <div class="accent-line"></div>
+                </div>
+                <div id="partners-logos" class="partners-logos">
+                    <!-- Dynamic rendering -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 3) УСЛУГИ -->
+        <section class="section-padding" id="services">
+            <div class="container">
+                <div class="section-title scroll-reveal">
+                    <h2 data-i18n="services.title">Все услуги в одном месте</h2>
+                    <p class="text-dim" data-i18n="services.subtitle">Несем полную ответственность и даем бессрочную
+                        гарантию</p>
+                    <div class="accent-line"></div>
+                </div>
+                <div id="services-grid" class="services-grid">
+                    <!-- Dynamic rendering -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 4) СТОИМОСТЬ -->
+        <section class="section-padding bg-midnight" id="download-price">
+            <div class="container">
+                <div class="section-title scroll-reveal">
+                    <h2 data-i18n="price.title">Гарантируем лучшую цену на рынке</h2>
+                    <p class="text-dim" data-i18n="price.subtitle">Скачайте полный прайс-лист на услуги</p>
+                    <div class="accent-line"></div>
+                </div>
+                <div class="price-card scroll-reveal">
+                    <img class="price-visual" src="img/price.png" alt="" loading="lazy" decoding="async">
+                    <p class="text-dim" data-i18n="price.delivery_title">Выберите где удобнее получить?</p>
+                    <div class="price-actions">
+                        <button type="button" class="btn-secondary" data-i18n="price.whatsapp">Получить в
+                            WhatsApp</button>
+                        <button type="button" class="btn-secondary" data-i18n="price.telegram">Получить в
+                            Telegram</button>
+                        <button type="button" class="btn-secondary" data-i18n="price.viber">Получить в Viber</button>
+                        <button type="button" class="btn-primary" data-i18n="price.get">Получить прайс</button>
+                    </div>
+                    <label class="consent-line price-consent">
+                        <input type="checkbox" required>
+                        <span data-i18n="price.consent">Согласен с условиями политики конфиденциальности данных</span>
+                    </label>
+                    <p class="price-updated text-dim" data-i18n="price.updated">Обновлен: 13.07.2022</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5) ПОЧЕМУ ДОВЕРЯЮТ -->
+        <section class="section-padding" id="clientsc">
+            <div class="container">
+                <div class="section-title scroll-reveal">
+                    <h2 data-i18n="advantages.title">Ответим, почему вы можете довериться нам</h2>
                     <div class="accent-line"></div>
                 </div>
                 <div id="advantages-grid" class="advantages-grid">
@@ -148,131 +208,179 @@
             </div>
         </section>
 
-        <!-- 3) АКЦИИ / СЕРВИСНЫЕ ПРЕДЛОЖЕНИЯ -->
-        <section class="section-padding bg-midnight" id="promotions">
+        <!-- 6) ЦИФРЫ -->
+        <section class="stats-bar" id="numbers">
             <div class="container">
-                <div class="section-title scroll-reveal">
-                    <h2 data-i18n="promotions.title">Сервисные предложения</h2>
-                    <p class="text-dim" data-i18n="promotions.subtitle">Актуальные акции и специальные предложения</p>
-                    <div class="accent-line"></div>
-                </div>
-                <div class="promotions-grid" id="promotions-grid">
+                <div id="stats-grid" class="stats-grid">
                     <!-- Dynamic rendering -->
                 </div>
             </div>
         </section>
 
-        <!-- 4) КОНСУЛЬТАЦИЯ МАСТЕРА -->
-        <section class="section-padding" id="consult">
+        <!-- 6.5) СЕРТИФИКАТЫ -->
+        <section class="section-padding" id="certificates">
             <div class="container">
-                <div class="consult-card">
+                <div class="certificates-slider-wrap">
+                    <div class="certificates-slider" id="certificates-slider">
+                        <img src="img/cert-1.jpg" alt="Сертификат" loading="lazy" decoding="async">
+                        <img src="img/cert-2.jpg" alt="Сертификат" loading="lazy" decoding="async">
+                        <img src="img/cert-3.jpg" alt="Сертификат" loading="lazy" decoding="async">
+                        <img src="img/cert-4.jpg" alt="Сертификат" loading="lazy" decoding="async">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7) АКЦИИ -->
+        <section class="section-padding bg-midnight" id="discount">
+            <div class="container">
+                <div class="section-title scroll-reveal">
+                    <h2 data-i18n="promotions.title">Актуальные акции и скидки</h2>
+                    <p class="text-dim" data-i18n="promotions.subtitle">Заботимся о бюджете</p>
+                    <div class="accent-line"></div>
+                </div>
+                <div class="promotions-grid" id="discount-grid">
+                    <!-- Dynamic rendering -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 8) ПРИМЕРЫ РАБОТ -->
+        <section class="section-padding" id="portfolio">
+            <div class="container">
+                <div class="section-title scroll-reveal">
+                    <h2 data-i18n="portfolio.title">Портфолио работ</h2>
+                    <p class="text-dim" data-i18n="portfolio.subtitle">Примеры выполненных ремонтов</p>
+                    <div class="accent-line"></div>
+                </div>
+                <div id="portfolio-grid" class="portfolio-grid">
+                    <!-- Dynamic rendering -->
+                </div>
+                <div class="portfolio-actions">
+                    <a href="#portfolio" class="btn-secondary" data-i18n="portfolio.cta">Перейти в портфолио</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9) ЭВАКУАТОР -->
+        <section class="section-padding bg-midnight" id="evacuator">
+            <div class="container">
+                <div class="evacuator-card scroll-reveal">
+                    <h2 data-i18n="evacuator.title">Эвакуатор бесплатно в пределах МКАД</h2>
+                    <p class="text-dim" data-i18n="evacuator.subtitle">Просто напишите нам в WhatsApp</p>
+                    <a href="#" class="btn-primary" data-i18n="evacuator.cta">Написать в Whatsapp</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10) 4 ШАГА -->
+        <section class="section-padding" id="worksteps">
+            <div class="container">
+                <div class="section-title scroll-reveal">
+                    <h2 data-i18n="process.title">Всего 4 шага к устранению неисправности</h2>
+                    <p class="text-dim" data-i18n="process.subtitle">Ваш автомобиль будет готов за 1-2 дня</p>
+                    <div class="accent-line"></div>
+                </div>
+                <div id="process-steps" class="process-steps">
+                    <!-- Dynamic rendering -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 11) ОТЗЫВЫ -->
+        <section class="section-padding bg-midnight" id="reviews">
+            <div class="container">
+                <div class="section-title scroll-reveal">
+                    <h2 data-i18n="reviews.title">Отзывы</h2>
+                    <p class="text-dim" data-i18n="reviews.subtitle">Лучше всего о нашей работе скажут клиенты</p>
+                    <div class="accent-line"></div>
+                </div>
+
+                <!-- Фото отзывов -->
+                <div class="reviews-photos-gallery">
+                    <img src="img/process-1.jpg" alt="Отзыв" loading="lazy" decoding="async">
+                    <img src="img/process-2.jpg" alt="Отзыв" loading="lazy" decoding="async">
+                    <img src="img/process-3.jpg" alt="Отзыв" loading="lazy" decoding="async">
+                    <img src="img/process-4.jpg" alt="Отзыв" loading="lazy" decoding="async">
+                    <img src="img/process-5.jpg" alt="Отзыв" loading="lazy" decoding="async">
+                    <img src="img/process-6.jpg" alt="Отзыв" loading="lazy" decoding="async">
+                </div>
+            </div>
+        </section>
+
+        <!-- 12) КОНСУЛЬТАЦИЯ -->
+        <section class="section-padding" id="getconsultation">
+            <div class="container">
+                <div class="consult-card consult-alt">
                     <div class="consult-text">
-                        <h2 data-i18n="consult.title">Требуется консультация мастера?</h2>
-                        <p class="text-dim" data-i18n="consult.subtitle">Звоните или оставьте заявку и мы ответим на все
-                            Ваши вопросы</p>
-                        <a class="consult-phone" href="tel:+74957451111">+7 (495) 745-11-11</a>
+                        <h2 data-i18n="consult.title">Перезвоним и проконсультируем</h2>
+                        <ul class="consult-list" id="consult-list">
+                            <!-- Dynamic rendering -->
+                        </ul>
+                        <p class="text-dim" data-i18n="consult.hours">Пн-Сб с 9:00 до 18:00;</p>
+                        <a class="consult-phone" href="tel:+74444444444">+7 (444) 444-44-44</a>
+                        <p class="text-dim" data-i18n="consult.messengers">Пишите нам в мессенджер</p>
+                        <div class="consult-messengers">
+                            <a href="#" class="messenger-chip">WhatsApp</a>
+                            <a href="#" class="messenger-chip">Telegram</a>
+                        </div>
                     </div>
                     <form id="consult-form" class="bmw-form consult-form">
-                        <div class="form-group">
-                            <input type="text" id="consult-name" required placeholder=" ">
-                            <label for="consult-name" data-i18n="consult.form_name">Ваше имя</label>
-                        </div>
                         <div class="form-group">
                             <input type="tel" id="consult-phone" required placeholder=" ">
                             <label for="consult-phone" data-i18n="consult.form_phone">Номер телефона</label>
                         </div>
                         <label class="consent-line">
                             <input type="checkbox" id="consult-consent" required>
-                            <span data-i18n="consult.consent">Я согласен(на) на обработку персональных данных</span>
+                            <span data-i18n="consult.consent">Согласен с условиями политики конфиденциальности
+                                данных</span>
                         </label>
-                        <button type="submit" class="btn-primary w-full" data-i18n="consult.submit">Отправить</button>
+                        <button type="submit" class="btn-primary w-full" data-i18n="consult.submit">Перезвоните
+                            мне</button>
                     </form>
                 </div>
             </div>
         </section>
 
-        <!-- 5) УСЛУГИ -->
-        <section class="section-padding" id="services">
+        <!-- 14) КОНТАКТЫ -->
+        <section class="section-padding" id="contacts">
             <div class="container">
                 <div class="section-title scroll-reveal">
-                    <h2 data-i18n="services.title">Услуги</h2>
-                    <p class="text-dim" data-i18n="services.subtitle">Широкий спектр услуг для обслуживания и ремонта
-                    </p>
+                    <h2 data-i18n="contact.title">Наши контакты</h2>
                     <div class="accent-line"></div>
                 </div>
-                <div id="services-grid" class="services-grid">
-                    <!-- Dynamic rendering by app.js -->
-                </div>
-                <div class="services-actions">
-                    <a href="#contact" class="btn-primary" data-i18n="services.cta_primary">Записаться</a>
-                    <a href="#" class="btn-secondary" data-i18n="services.cta_telegram">Записаться через Telegram</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- 6) ТО -->
-        <section class="section-padding" id="to">
-            <div class="container">
-                <div class="section-title scroll-reveal">
-                    <h2 data-i18n="to.title">ТО</h2>
-                    <p class="text-dim" data-i18n="to.subtitle">Техническое обслуживание по регламенту BMW</p>
-                    <div class="accent-line"></div>
-                </div>
-                <div id="to-grid" class="services-grid">
-                    <!-- Dynamic rendering by app.js -->
-                </div>
-            </div>
-        </section>
-
-        <!-- 7) ОТЗЫВЫ -->
-        <section class="section-padding bg-midnight" id="reviews">
-            <div class="container">
-                <div class="section-title scroll-reveal">
-                    <h2 data-i18n="reviews.title">Отзывы</h2>
-                    <div class="accent-line"></div>
-                </div>
-                <div id="reviews-grid" class="reviews-grid reviews-slider">
-                    <!-- Dynamic rendering -->
-                </div>
-            </div>
-        </section>
-
-        <!-- 9) КОНТАКТЫ + ЛОКАЦИИ -->
-        <section class="section-padding" id="contact">
-            <div class="container">
-                <div class="section-title scroll-reveal">
-                    <h2 data-i18n="contact.title">Контакты</h2>
-                    <div class="accent-line"></div>
-                </div>
-
-                <div id="locations-grid" class="locations-grid scroll-reveal">
-                    <!-- Dynamic locations by app.js -->
-                </div>
-
-                <div class="contact-wrapper">
-                    <div class="contact-form-side scroll-reveal">
-                        <form id="contact-form" class="bmw-form">
-                            <div class="form-group">
-                                <input type="text" id="name" required placeholder=" ">
-                                <label for="name" data-i18n="contact.form_name">Ваше имя</label>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" id="email" required placeholder=" ">
-                                <label for="email" data-i18n="contact.form_email">Ваш Email</label>
-                            </div>
-                            <div class="form-group">
-                                <input type="tel" id="phone" required placeholder=" ">
-                                <label for="phone" data-i18n="contact.form_phone">Номер телефона</label>
-                            </div>
-                            <div class="form-group">
-                                <textarea id="message" required placeholder=" "></textarea>
-                                <label for="message" data-i18n="contact.form_message">Ваше сообщение</label>
-                            </div>
-                            <button type="submit" class="btn-primary w-full" data-i18n="contact.form_submit">Отправить
-                                заявку</button>
-                        </form>
+                <div class="contacts-grid">
+                    <div class="contact-info-card scroll-reveal">
+                        <ul class="contact-list">
+                            <li data-i18n="contact.info_address">Москва, пр-т Вернадского, 36</li>
+                            <li data-i18n="contact.info_hours">Пн-Сб 10:00 - 19:00</li>
+                            <li><a href="tel:+74444444444" data-i18n="contact.info_phone">+7 (444) 444-44-44</a></li>
+                            <li><a href="mailto:info@avto.ru" data-i18n="contact.info_email">info@avto.ru</a></li>
+                        </ul>
+                        <p class="text-dim" data-i18n="contact.online">Пишите, мы онлайн</p>
+                        <div class="consult-messengers">
+                            <a href="#" class="messenger-chip">WhatsApp</a>
+                            <a href="#" class="messenger-chip">Telegram</a>
+                        </div>
+                        <p class="text-dim" data-i18n="contact.socials">Мы в соцсетях</p>
+                        <div class="consult-messengers">
+                            <a href="#" class="messenger-chip">VK</a>
+                        </div>
+                        <a href="#" class="service-link" data-i18n="contact.legal">Реквизиты для юр. лиц
+                            <span>→</span></a>
                     </div>
-                    <div class="contact-info-side scroll-reveal">
+                    <div class="contact-gallery scroll-reveal">
+                        <img src="img/contact-1.jpg" alt="" loading="lazy" decoding="async">
+                        <img src="img/contact-2.jpg" alt="" loading="lazy" decoding="async">
+                        <img src="img/contact-3.jpg" alt="" loading="lazy" decoding="async">
+                        <img src="img/contact-4.jpg" alt="" loading="lazy" decoding="async">
+                        <img src="img/contact-5.jpg" alt="" loading="lazy" decoding="async">
+                        <img src="img/contact-6.jpg" alt="" loading="lazy" decoding="async">
+                    </div>
+                    <div class="contact-map scroll-reveal">
+                        <p class="contact-map-title" data-i18n="contact.map_title">Адреса офиса:</p>
+                        <a class="service-link" href="#" data-i18n="contact.map_link">Посмотреть схемы перехода
+                            <span>→</span></a>
                         <div id="map-container" class="map-box map-consent"
                             data-map-src="https://yandex.ru/map-widget/v1/?um=constructor%3A783d2f01087e21e354ac4dceb3f7a6f7f3c119f7625fd6e51bf377d38ecab7ba&amp;source=constructor">
                             <div class="map-consent-inner">
